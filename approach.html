@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notre approche — Owl | Think Actionn</title>
+  <meta name="description" content="Owl ne se contente pas de lire une facture : il prépare son traitement comptable selon le contexte de l&#8217;entreprise. Le comptable garde le contrôle.">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@500&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a class="brand" href="index.html" aria-label="Think Actionn, accueil">
+        <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.6"/></svg>
+        <span class="brand__name">THINK ACTIONN</span>
+      </a>
+      <nav class="nav__links" id="nav-menu" aria-label="Navigation principale">
+        <a href="features.html">Fonctionnalités</a>
+        <a href="how-it-works.html">Comment ça marche</a>
+        <a href="accounting-firms.html">Cabinets comptables</a>
+        <a href="companies.html">Entreprises</a>
+        <a class="nav__menu-cta" href="demo.html#demande">Demander une démonstration</a>
+      </nav>
+      <a class="btn btn--light btn--sm nav__cta" href="demo.html#demande">Demander une démo</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="legal-hero page-hero" aria-labelledby="page-title">
+      <div class="wrap">
+        <p class="page-hero__k">Notre approche</p>
+        <h1 id="page-title">Owl ne se contente pas de lire vos factures. Il utilise le contexte de votre entreprise pour préparer leur traitement comptable et fiscal.</h1>
+        <p class="legal-hero__lede">
+          Extraire des champs est la partie simple. Le travail comptable commence ensuite&nbsp;:
+          décider ce que la pièce signifie pour cette entreprise.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="a1">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h2 id="a1">Ce qu’un OCR lit, ce qu’Owl prépare.</h2>
+          <p class="lede">Un OCR répond à «&nbsp;qu’est-ce qui est écrit sur cette facture&nbsp;?&nbsp;». Owl répond à «&nbsp;pour cette entreprise, comment la traiter&nbsp;?&nbsp;». Même facture d’électricité, deux résultats.</p>
+        </div>
+        <div class="compare">
+          <article class="compare__col compare__col--plain" data-reveal>
+            <h3>Un outil OCR</h3>
+            <p class="compare__sub">Les champs extraits</p>
+            <dl class="fields">
+              <div><dt>Fournisseur</dt><dd>SRM-CS</dd></div>
+              <div><dt>Date</dt><dd>03/04/2026</dd></div>
+              <div><dt>N° de facture</dt><dd>1613813788</dd></div>
+              <div><dt>Montant HT</dt><dd class="num">2 783,13</dd></div>
+              <div><dt>TVA</dt><dd class="num">668,53</dd></div>
+              <div><dt>Montant TTC</dt><dd class="num">3 451,66</dd></div>
+            </dl>
+            <div class="compare__todo">
+              <p>Reste à décider</p>
+              <ul>
+                <li>Quel compte pour cette dépense&nbsp;?</li>
+                <li>La TVA est-elle déductible&nbsp;?</li>
+                <li>Quel compte tiers pour ce fournisseur&nbsp;?</li>
+                <li>Quelle écriture, dans quel journal&nbsp;?</li>
+              </ul>
+            </div>
+          </article>
+
+          <div class="compare__arrow" aria-hidden="true"><span></span></div>
+
+          <article class="compare__col compare__col--owl" data-reveal>
+            <h3>Owl</h3>
+            <p class="compare__sub">Les champs, croisés avec le contexte de l’entreprise</p>
+            <table class="mini-entry">
+              <thead><tr><th>Compte</th><th>Libellé</th><th class="num">Débit</th><th class="num">Crédit</th></tr></thead>
+              <tbody>
+                <tr><td>6125100000</td><td>Électricité</td><td class="num">2 783,13</td><td></td></tr>
+                <tr><td>3455220000</td><td>TVA récupérable</td><td class="num">668,53</td><td></td></tr>
+                <tr><td>4411000000</td><td>SRM-CS, 4411L001</td><td></td><td class="num">3 451,66</td></tr>
+              </tbody>
+              <tfoot><tr><td></td><td>Équilibrée</td><td class="num">3 451,66</td><td class="num">3 451,66</td></tr></tfoot>
+            </table>
+            <div class="compare__todo compare__todo--done">
+              <p>Reste à faire</p>
+              <ul><li>Contrôler et exporter</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section approach-ctx" aria-labelledby="a2">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h2 id="a2">Le contexte de l’entreprise d’abord.</h2>
+          <p class="lede">Une facture seule ne suffit pas à choisir un traitement. Owl combine les données de la pièce avec ce que vous avez renseigné sur l’entreprise.</p>
+        </div>
+        <dl class="ctxgrid">
+          <div data-reveal><dt>Activité de l’entreprise</dt><dd>Le même achat ne se traite pas de la même façon selon ce que fait l’entreprise.</dd></div>
+          <div data-reveal><dt>Nature de l’opération</dt><dd>Charge ou immobilisation, et le compte qui correspond à la dépense.</dd></div>
+          <div data-reveal><dt>Statut TVA</dt><dd>Avec ou sans droit à déduction&nbsp;: TVA récupérable, ou intégrée au coût.</dd></div>
+          <div data-reveal><dt>Fournisseurs et comptes tiers</dt><dd>Le compte fournisseur propre à chaque tiers, tel que vous l’avez défini.</dd></div>
+          <div data-reveal><dt>Fournisseurs soumis à la RAS</dt><dd>Pour ces fournisseurs, la retenue à la source est traitée dans l’écriture et reprise dans le tableau RAS.</dd></div>
+          <div data-reveal><dt>Contexte comptable</dt><dd>Le journal concerné et les comptes utilisés par le dossier.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section questions" aria-labelledby="a3">
+      <div class="wrap">
+        <div class="questions__head" data-reveal>
+          <h2 id="a3">Même facture. Autre entreprise. Autre écriture.</h2>
+          <p class="lede">
+            Un exemple illustratif&nbsp;: changez l’activité ou la situation TVA et observez comment le traitement comptable change.
+          </p>
+        </div>
+
+        <div class="demo" data-demo data-reveal>
+          <div class="demo__controls">
+            <fieldset class="seg">
+              <legend><span class="seg__n">1</span> Activité de l’entreprise</legend>
+              <label><input type="radio" name="activite" value="revente" checked><span>Revente de fournitures de bureau</span></label>
+              <label><input type="radio" name="activite" value="services"><span>Prestation de services</span></label>
+            </fieldset>
+            <fieldset class="seg">
+              <legend><span class="seg__n">2</span> Situation au regard de la TVA</legend>
+              <label><input type="radio" name="tva" value="avec" checked><span>Avec droit à déduction</span></label>
+              <label><input type="radio" name="tva" value="sans"><span>Sans droit à déduction</span></label>
+            </fieldset>
+            <div class="demo__invoice">
+              <p>La facture reçue (exemple)</p>
+              <strong>Fournitures de bureau</strong>
+              <span>Toner, papier A4, classeurs</span>
+              <dl>
+                <div><dt>HT</dt><dd>4 250,00</dd></div>
+                <div><dt>TVA 20 %</dt><dd>850,00</dd></div>
+                <div><dt>TTC</dt><dd>5 100,00</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="demo__result" aria-live="polite">
+            <div class="demo__result-head">
+              <span class="demo__label"><i class="st st--prepared" aria-hidden="true"></i>Traitement comptable</span>
+              <span class="demo__auto" data-auto><span class="demo__bar"><i></i></span>Défilement automatique</span>
+            </div>
+            <div class="dentry">
+              <div class="dentry__row dentry__head"><span>Compte</span><span>Libellé</span><span class="num">Débit</span><span class="num">Crédit</span></div>
+              <div class="dentry__row" data-row="charge"><span class="acc" data-acc>6111</span><span data-lab>Achats de marchandises</span><span class="num" data-amt>4 250,00</span><span class="num"></span></div>
+              <div class="dentry__collapse" data-row="tva"><div class="dentry__row"><span class="acc">34552</span><span>État, TVA récupérable sur charges</span><span class="num">850,00</span><span class="num"></span></div></div>
+              <div class="dentry__row"><span class="acc">4411</span><span>Fournisseurs</span><span class="num"></span><span class="num">5 100,00</span></div>
+              <div class="dentry__row dentry__total"><span></span><span>Équilibrée</span><span class="num">5 100,00</span><span class="num">5 100,00</span></div>
+            </div>
+            <ul class="why">
+              <li data-why="activite">Les fournitures sont achetées pour être revendues&nbsp;: elles sont comptabilisées en achats de marchandises.</li>
+              <li data-why="tva">La TVA est déductible&nbsp;: elle est portée au compte de TVA récupérable.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fit" aria-labelledby="a4">
+      <div class="wrap">
+        <div class="section__head" data-reveal>
+          <h2 id="a4">Owl prépare. Le comptable contrôle.</h2>
+          <p class="lede">Owl est une couche de préparation, placée avant votre logiciel comptable. Pas un ERP, pas un remplaçant.</p>
+        </div>
+        <div class="pipeline" data-reveal role="img" aria-label="Schéma : vos pièces entrent dans Owl, qui prépare les écritures ; vous les contrôlez, puis elles sont exportées vers votre logiciel comptable, qui ne change pas.">
+          <div class="pipeline__node"><span class="pipeline__k">Entrée</span><strong>Vos pièces</strong><span>Factures, relevés, tickets</span></div>
+          <div class="pipeline__link" aria-hidden="true"><i></i></div>
+          <div class="pipeline__node pipeline__node--owl"><span class="pipeline__k">Préparation</span><strong>Owl</strong><span>Écritures préparées dans votre contexte</span></div>
+          <div class="pipeline__link" aria-hidden="true"><i></i></div>
+          <div class="pipeline__node"><span class="pipeline__k">Contrôle</span><strong>Vous</strong><span>Vérification et corrections</span></div>
+          <div class="pipeline__link" aria-hidden="true"><i></i></div>
+          <div class="pipeline__node pipeline__node--yours"><span class="pipeline__k">Inchangé</span><strong>Votre logiciel</strong><span>Celui que vous utilisez déjà</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="wrap cta-band__inner" data-reveal>
+        <div>
+          <h2 id="cta-title">Voyez cette logique appliquée à vos propres pièces.</h2>
+          <p>Nous vous montrons Owl sur des documents qui ressemblent aux vôtres.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--light" href="demo.html#demande">Demander une démonstration</a>
+          <a class="btn btn--ghost-dark" href="features.html">Voir les fonctionnalités</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand brand--footer" href="index.html" aria-label="Think Actionn, accueil">
+            <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.6"/></svg>
+            <span class="brand__name">THINK ACTIONN</span>
+          </a>
+          <p>Owl — Prépare vos écritures comptables.</p>
+        </div>
+        <nav class="footer__col" aria-label="Produit">
+          <p class="footer__h">Produit</p>
+          <ul>
+            <li><a href="features.html">Fonctionnalités</a></li>
+            <li><a href="how-it-works.html">Comment ça marche</a></li>
+            <li><a href="approach.html">Notre approche</a></li>
+            <li><a href="demo.html">Démonstration</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-label="Solutions">
+          <p class="footer__h">Solutions</p>
+          <ul>
+            <li><a href="accounting-firms.html">Cabinets comptables</a></li>
+            <li><a href="companies.html">Entreprises</a></li>
+          </ul>
+        </nav>
+        <div class="footer__col">
+          <p class="footer__h">Ressources</p>
+          <ul>
+            <li><span class="footer__soon">Guides et articles, bientôt</span></li>
+          </ul>
+        </div>
+        <nav class="footer__col" aria-label="Think Actionn">
+          <p class="footer__h">Think Actionn</p>
+          <ul>
+            <li><a href="demo.html#demande">Nous contacter</a></li>
+            <li><a href="mailto:contact@thinkactionn.com">contact@thinkactionn.com</a></li>
+            <li><a href="tel:+212644412524">06 44 41 25 24</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-label="Légal">
+          <p class="footer__h">Légal</p>
+          <ul>
+            <li><a href="confidentialite.html">Confidentialité</a></li>
+            <!-- TODO: ajouter « Mentions légales » et « Conditions d’utilisation » quand les textes seront rédigés. -->
+          </ul>
+        </nav>
+      </div>
+      <p class="footer__copy">© <span data-year>2026</span> Think Actionn</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

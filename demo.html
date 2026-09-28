@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Démonstration — Owl | Think Actionn</title>
+  <meta name="description" content="Découvrez Owl en action et demandez une démonstration sur des documents qui ressemblent aux vôtres.">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@500&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a class="brand" href="index.html" aria-label="Think Actionn, accueil">
+        <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.6"/></svg>
+        <span class="brand__name">THINK ACTIONN</span>
+      </a>
+      <nav class="nav__links" id="nav-menu" aria-label="Navigation principale">
+        <a href="features.html">Fonctionnalités</a>
+        <a href="how-it-works.html">Comment ça marche</a>
+        <a href="accounting-firms.html">Cabinets comptables</a>
+        <a href="companies.html">Entreprises</a>
+        <a class="nav__menu-cta" href="demo.html#demande">Demander une démonstration</a>
+      </nav>
+      <a class="btn btn--light btn--sm nav__cta" href="demo.html#demande">Demander une démo</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero hero--demo" aria-labelledby="page-title">
+      <div class="wrap hero__top">
+        <div class="hero__head">
+          <p class="page-hero__k">Démonstration</p>
+          <h1 id="page-title" class="hero__title">
+            <span class="line"><span>Découvrez Owl en action.</span></span>
+          </h1>
+        </div>
+        <div class="hero__side">
+          <p class="hero__lede">
+            L’interface d’Owl rejoue la préparation des écritures comptables&nbsp;: contexte de l’entreprise,
+            import d’un fichier de factures, analyse, écritures du journal. La préparation TVA se présente lors d’une démonstration.
+          </p>
+          <ol class="flowchips flowchips--plain" aria-label="Parcours de la démonstration">
+            <li>Contexte</li><li>Import</li><li>Analyse</li><li>Écritures</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="wrap hero__stage" id="demo">
+        <ol class="steps-bar" data-stepsbar aria-label="Étapes de la démonstration">
+          <li><span>1</span>Paramètres fiscaux</li>
+          <li><span>2</span>Comptes tiers</li>
+          <li><span>3</span>Doc / Photo</li>
+          <li><span>4</span>Analyse et journal</li>
+        </ol>
+
+        <div class="window" role="img" aria-label="Démonstration du tableau de bord OWL : le secteur Services et l’option avec droit à déduction sont choisis, les comptes tiers fournisseurs sont vérifiés, un PDF de dix pages est chargé puis analysé. Le journal des achats se remplit avec quarante lignes équilibrées.">
+          <div class="window__bar">
+            <div class="window__title">
+              <svg class="window__owl" viewBox="72 4 56 58" aria-hidden="true"><path fill="currentColor" d="M78 22 84 6l11 11q5-2 10 0l11-11 6 16q4 10 2 20-4 16-24 18-20-2-24-18-2-10 2-20z"/><circle cx="89" cy="34" r="10" fill="#f0f0ee"/><circle cx="111" cy="34" r="10" fill="#f0f0ee"/><circle cx="89" cy="31" r="4.5" fill="currentColor"/><circle cx="111" cy="31" r="4.5" fill="currentColor"/></svg>
+              <strong>OWL</strong><span>Dossier client</span><span class="window__sep"></span><span>Janvier – mai 2026</span>
+            </div>
+            <div class="window__controls" aria-hidden="true">
+              <svg viewBox="0 0 10 10"><path d="M1 5h8"/></svg>
+              <svg viewBox="0 0 10 10"><rect x="1.5" y="1.5" width="7" height="7"/></svg>
+              <svg viewBox="0 0 10 10"><path d="M1.5 1.5l7 7M8.5 1.5l-7 7"/></svg>
+            </div>
+          </div>
+
+          <div class="dash-viewport" data-viewport>
+            <div class="dash" data-dash aria-hidden="true">
+              <!-- sidebar -->
+              <aside class="dash__side">
+                <div class="dash__brand"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/></svg><b>THINK ACTIONN</b></div>
+                <p class="dash__group">TOUS LES JOURNAUX <svg viewBox="0 0 10 10"><path d="M2 6.5 5 3.5l3 3"/></svg></p>
+                <ul class="dash__nav">
+                  <li class="is-active" data-nav="journal"><svg viewBox="0 0 16 16"><path d="M1.5 2h2l1.6 8h7.4l1.5-5.5H4.3"/><circle cx="6" cy="13" r="1"/><circle cx="12" cy="13" r="1"/></svg>Journal Achats</li>
+                  <li><svg viewBox="0 0 16 16"><path d="M1.5 11.5 6 7l3 3 5.5-5.5M10.5 4.5h4v4"/></svg>Journal Ventes</li>
+                  <li><svg viewBox="0 0 16 16"><rect x="1.5" y="3.5" width="13" height="9" rx="1"/><path d="M1.5 6.5h13"/></svg>Journal Banque</li>
+                  <li><svg viewBox="0 0 16 16"><rect x="2.5" y="4" width="11" height="9" rx="1"/><path d="M4.5 4V2.5h7V4M10 8.5h1.5"/></svg>Journal Caisse</li>
+                  <li><svg viewBox="0 0 16 16"><path d="m8 2 6.5 3.2L8 8.4 1.5 5.2zM1.5 8 8 11.2 14.5 8M1.5 10.8 8 14l6.5-3.2"/></svg>Journal OD</li>
+                </ul>
+                <p class="dash__group dash__group--two">PRÉPARATION FISCALE <svg viewBox="0 0 10 10"><path d="M2 6.5 5 3.5l3 3"/></svg></p>
+                <ul class="dash__nav">
+                  <li data-nav="deduction"><svg viewBox="0 0 16 16"><path d="m3 13 10-10"/><circle cx="4.5" cy="4.5" r="1.5"/><circle cx="11.5" cy="11.5" r="1.5"/></svg>Tableau de déduction TVA</li>
+                  <li data-nav="encaissement"><svg viewBox="0 0 16 16"><circle cx="6" cy="6" r="3.5"/><circle cx="10.5" cy="10.5" r="3.5"/></svg>Tableau d’encaissement</li>
+                  <li data-nav="ras"><svg viewBox="0 0 16 16"><path d="M2.5 8a5.5 5.5 0 1 0 1.6-3.9M2.5 2.5v3h3M8 5v3.2l2 1.3"/></svg>Tableau RAS</li>
+                </ul>
+              </aside>
+
+              <!-- main -->
+              <div class="dash__main" data-dash-main>
+                <div class="dash__top">
+                  <svg class="dash__burger" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12"/></svg>
+                  <span class="dash__crumb" data-crumb>JOURNAL : JOURNAL ACHATS</span>
+                  <span class="dash__jsel"><b data-jsel>JOURNAL ACHATS</b> <svg viewBox="0 0 10 10"><path d="m2.5 3.8 2.5 2.5 2.5-2.5"/></svg></span>
+                </div>
+
+                <!-- journal view -->
+                <div class="jv" data-view="journal">
+                  <div class="dash__toolbar">
+                    <div class="dash__search"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg>Rechercher…</div>
+                    <div class="dash__field" data-target="sector">
+                      <label>SECTEUR</label>
+                      <span class="dash__select"><b>SERVICES</b><svg viewBox="0 0 10 10"><path d="m2.5 3.8 2.5 2.5 2.5-2.5"/></svg></span>
+                    </div>
+                    <div class="dash__field" data-target="exo">
+                      <label>EXONÉRÉ</label>
+                      <span class="dash__select dash__select--wide"><b data-exo>AVEC DROIT DEDUCTION</b><svg viewBox="0 0 10 10"><path d="m2.5 3.8 2.5 2.5 2.5-2.5"/></svg></span>
+                      <ul class="dd" data-dd><li class="is-on">AVEC DROIT DEDUCTION</li><li>SANS DROIT DEDUCTION</li></ul>
+                    </div>
+                    <div class="dash__btn" data-target="tiers"><svg viewBox="0 0 16 16"><path d="M4 1.5h5.5L13 5v9.5H4z"/><path d="M9.5 1.5V5H13M6.5 8.5h4M6.5 11h4"/></svg>COMPTE TIERS FOURNISSEUR</div>
+                    <div class="dash__upslot">
+                      <div class="dash__upload" data-target="upload"><svg viewBox="0 0 16 16"><path d="M4 1.5h5.5L13 5v9.5H4z"/><path d="M9.5 1.5V5H13M8.5 12V8M6.5 10l2-2 2 2"/></svg>Doc / Photo</div>
+                      <div class="dash__loaded" data-loaded>
+                        <span class="dash__chip">factures_janv-mai_2026.pdf <i>×</i></span>
+                        <span class="dash__analyse" data-target="analyse">ANALYSE</span>
+                      </div>
+                    </div>
+                    <div class="tiers-pop" data-tierspop>
+                      <p>COMPTES TIERS FOURNISSEURS</p>
+                      <ul>
+                        <li><span>SRM-CS</span><b>4411L001</b></li>
+                        <li><span>BATILOU</span><b>4411B014</b></li>
+                        <li><span>MWOOD MAROC</span><b>4411M021</b></li>
+                        <li><span>ID MAROC</span><b>44111002</b></li>
+                        <li><span>MICROSOFT</span><b>4411M0001</b></li>
+                        <li><span>VISIT MOROCCO</span><b>4411V</b></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="dash__actions">
+                    <span class="dash__export" data-export><svg viewBox="0 0 16 16"><path d="M4 1.5h5.5L13 5v9.5H4z"/><path d="M9.5 1.5V5H13"/></svg>EXPORTER <svg viewBox="0 0 10 10"><path d="m2.5 3.8 2.5 2.5 2.5-2.5"/></svg></span>
+                    <span class="dash__vsep"></span>
+                    <span class="dash__clear" data-target="clear">EFFACER LES DONNÉES</span>
+                  </div>
+
+                  <div class="dash__content" data-content>
+                    <div class="docpanel" data-docpanel>
+                      <div class="docpanel__head"><span><i></i>DOCUMENT SOURCE</span><b data-target="closedoc">×</b></div>
+                      <div class="docpanel__body">
+                        <div class="docpaper" data-docpaper></div>
+                        <div class="docpanel__scan" data-scan></div>
+                      </div>
+                      <div class="docpanel__foot"><span class="pgbtn">‹</span><b>PAGE <span data-page>1</span> / 10</b><span class="pgbtn pgbtn--on">›</span></div>
+                    </div>
+
+                    <div class="dash__table">
+                      <div class="dt__scroll">
+                        <div class="dt__inner">
+                          <div class="dt__row dt__head">
+                            <span>CODE JOURNAL</span><span>DATE DE FACTURE</span><span>N° DE COMPTE GÉNÉRAL</span><span>N° COMPTE TIERS</span><span>LIBELLÉ D’ÉCRITURE</span><span>COMPTE TIERS</span><span>N° DE FACTURE</span><span class="r">DÉBIT</span><span class="r">CRÉDIT</span>
+                          </div>
+                          <div class="dt__add"><svg viewBox="0 0 12 12"><path d="M6 1.5v9M1.5 6h9"/></svg>AJOUTER UNE LIGNE</div>
+                          <div class="dt__body"><div class="dt__rows" data-rows></div></div>
+                        </div>
+                      </div>
+                      <div class="dt__hbar" data-hbar><i></i></div>
+                      <div class="dt__foot">
+                        <span>DÉBIT&nbsp;:</span><b data-tdebit>0,00</b>
+                        <span>CRÉDIT&nbsp;:</span><b data-tcredit class="is-credit">0,00</b>
+                        <em class="dt__balanced" data-balanced><span data-linecount>40</span> lignes, écritures équilibrées</em>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ov-analyse" data-analyse>
+                  <div class="ov-analyse__head">
+                    <svg viewBox="72 4 56 58" aria-hidden="true"><path fill="currentColor" d="M78 22 84 6l11 11q5-2 10 0l11-11 6 16q4 10 2 20-4 16-24 18-20-2-24-18-2-10 2-20z"/><circle cx="89" cy="34" r="10" fill="#fff"/><circle cx="111" cy="34" r="10" fill="#fff"/><circle cx="89" cy="31" r="4.5" fill="currentColor"/><circle cx="111" cy="31" r="4.5" fill="currentColor"/></svg>
+                    <div><b>OWL analyse le document</b><span data-analyse-doc>10 pages, 13 pièces</span></div>
+                  </div>
+                  <ul data-checks>
+                    <li>Lecture des libellés et des montants</li>
+                    <li>Secteur&nbsp;: <b>Services</b></li>
+                    <li>Exonération&nbsp;: <b>avec droit à déduction</b></li>
+                    <li>Charge ou immobilisation, taux de TVA, devises</li>
+                    <li>Retenues à la source et comptes tiers</li>
+                  </ul>
+                </div>
+
+                <svg class="cursor" data-cursor viewBox="0 0 20 20"><path d="M3 2 16 9.5 10 11 7.5 17z" fill="#111" stroke="#fff" stroke-width="1.3" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REQUEST A DEMO -->
+    <section class="contact" id="demande" aria-labelledby="contact-title">
+      <div class="wrap contact__grid">
+        <div class="contact__copy" data-reveal>
+          <h2 id="contact-title">Demander une démonstration.</h2>
+          <p class="lede">
+            Nous commençons par un échange sur vos factures, vos volumes, vos activités et votre logiciel.
+            Ensuite, nous vous montrons Owl sur des documents qui ressemblent aux vôtres.
+          </p>
+          <dl class="contact__direct">
+            <div><dt>E-mail</dt><dd><a href="mailto:contact@thinkactionn.com">contact@thinkactionn.com</a></dd></div>
+            <div><dt>Téléphone</dt><dd><a href="tel:+212644412524">06 44 41 25 24</a></dd></div>
+          </dl>
+        </div>
+
+        <form class="form" id="contact-form" novalidate data-reveal
+              data-endpoint="https://n8n.srv1866391.hstgr.cloud/webhook/a3debdad-afb9-4561-bf40-1d1f3d69cfc5">
+          <div class="form__row">
+            <div class="field-group">
+              <label for="f-name">Nom complet</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field-group">
+              <label for="f-email">E-mail professionnel</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="field-group">
+              <label for="f-phone">Téléphone</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+212 6 00 00 00 00" required>
+            </div>
+            <div class="field-group">
+              <label for="f-org">Cabinet ou entreprise</label>
+              <input id="f-org" name="organisation" type="text" autocomplete="organization" required>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="field-group">
+              <label for="f-type">Vous êtes</label>
+              <select id="f-type" name="type" required>
+                <option value="">Choisir</option>
+                <option>Un cabinet comptable</option>
+                <option>Une entreprise avec un service comptable</option>
+                <option>Un expert-comptable indépendant</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="f-volume">Factures par mois, environ</label>
+              <select id="f-volume" name="volume">
+                <option value="">Choisir</option>
+                <option>Moins de 200</option>
+                <option>De 200 à 1 000</option>
+                <option>De 1 000 à 5 000</option>
+                <option>Plus de 5 000</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="f-msg">Comment travaillez-vous aujourd’hui&nbsp;? <span class="optional">Facultatif</span></label>
+            <textarea id="f-msg" name="message" rows="4"></textarea>
+          </div>
+          <p class="form__error" id="form-error" role="alert" hidden></p>
+          <div class="form__submit">
+            <button class="btn btn--light" type="submit" data-submit>Demander une démonstration</button>
+            <p class="form__privacy">Vos informations servent uniquement à vous recontacter.</p>
+          </div>
+          <div class="form__done" id="form-done" hidden tabindex="-1">
+            <strong>Demande envoyée.</strong>
+            <p>Think Actionn vous contactera à l’adresse <span data-done-email></span> ou au <span data-done-phone></span> pour organiser un échange.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand brand--footer" href="index.html" aria-label="Think Actionn, accueil">
+            <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.6"/></svg>
+            <span class="brand__name">THINK ACTIONN</span>
+          </a>
+          <p>Owl — Prépare vos écritures comptables.</p>
+        </div>
+        <nav class="footer__col" aria-label="Produit">
+          <p class="footer__h">Produit</p>
+          <ul>
+            <li><a href="features.html">Fonctionnalités</a></li>
+            <li><a href="how-it-works.html">Comment ça marche</a></li>
+            <li><a href="approach.html">Notre approche</a></li>
+            <li><a href="demo.html">Démonstration</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-label="Solutions">
+          <p class="footer__h">Solutions</p>
+          <ul>
+            <li><a href="accounting-firms.html">Cabinets comptables</a></li>
+            <li><a href="companies.html">Entreprises</a></li>
+          </ul>
+        </nav>
+        <div class="footer__col">
+          <p class="footer__h">Ressources</p>
+          <ul>
+            <li><span class="footer__soon">Guides et articles, bientôt</span></li>
+          </ul>
+        </div>
+        <nav class="footer__col" aria-label="Think Actionn">
+          <p class="footer__h">Think Actionn</p>
+          <ul>
+            <li><a href="demo.html#demande">Nous contacter</a></li>
+            <li><a href="mailto:contact@thinkactionn.com">contact@thinkactionn.com</a></li>
+            <li><a href="tel:+212644412524">06 44 41 25 24</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-label="Légal">
+          <p class="footer__h">Légal</p>
+          <ul>
+            <li><a href="confidentialite.html">Confidentialité</a></li>
+            <!-- TODO: ajouter « Mentions légales » et « Conditions d’utilisation » quand les textes seront rédigés. -->
+          </ul>
+        </nav>
+      </div>
+      <p class="footer__copy">© <span data-year>2026</span> Think Actionn</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

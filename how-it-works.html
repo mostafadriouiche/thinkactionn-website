@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comment ça marche — Owl | Think Actionn</title>
+  <meta name="description" content="Les huit étapes d&#8217;Owl : contexte de l&#8217;entreprise, import, analyse, application du contexte, écritures, tableaux TVA, contrôle et export.">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@500&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a class="brand" href="index.html" aria-label="Think Actionn, accueil">
+        <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.6"/></svg>
+        <span class="brand__name">THINK ACTIONN</span>
+      </a>
+      <nav class="nav__links" id="nav-menu" aria-label="Navigation principale">
+        <a href="features.html">Fonctionnalités</a>
+        <a href="how-it-works.html" aria-current="page">Comment ça marche</a>
+        <a href="accounting-firms.html">Cabinets comptables</a>
+        <a href="companies.html">Entreprises</a>
+        <a class="nav__menu-cta" href="demo.html#demande">Demander une démonstration</a>
+      </nav>
+      <a class="btn btn--light btn--sm nav__cta" href="demo.html#demande">Demander une démo</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="legal-hero page-hero" aria-labelledby="page-title">
+      <div class="wrap">
+        <p class="page-hero__k">Comment ça marche</p>
+        <h1 id="page-title">Du fichier de factures aux écritures et aux tableaux TVA.</h1>
+        <p class="legal-hero__lede">
+          Vous donnez le contexte de l’entreprise et vos documents. Owl prépare les écritures comptables
+          et, quand c’est nécessaire, les tableaux TVA. Vous contrôlez avant tout export.
+        </p>
+        <ol class="flowchips" aria-label="Les huit étapes">
+          <li><a href="#etape-1">Configurer</a></li>
+          <li><a href="#etape-2">Importer</a></li>
+          <li><a href="#etape-3">Analyser</a></li>
+          <li><a href="#etape-4">Appliquer le contexte</a></li>
+          <li><a href="#etape-5">Écritures</a></li>
+          <li><a href="#etape-6">Tableaux TVA</a></li>
+          <li><a href="#etape-7">Contrôler</a></li>
+          <li><a href="#etape-8">Exporter</a></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section step" id="etape-1" aria-labelledby="s1">
+      <div class="wrap step__grid">
+        <div class="step__copy" data-reveal>
+          <p class="feat__n">01</p>
+          <h2 id="s1">Configurer le contexte de l’entreprise</h2>
+          <p class="lede">Owl n’analyse jamais une facture indépendamment de l’entreprise qui la reçoit.</p>
+          <ul class="feat__list">
+            <li><b>Secteur</b>&nbsp;: l’activité de l’entreprise</li>
+            <li><b>Statut TVA</b>&nbsp;: avec ou sans droit à déduction</li>
+            <li><b>Fournisseurs</b>&nbsp;: leurs comptes tiers</li>
+            <li><b>Fournisseurs soumis à la RAS</b>&nbsp;: ceux pour qui une retenue à la source s’applique</li>
+          </ul>
+        </div>
+        <figure class="shot" data-reveal>
+          <img src="assets/screens/owl-parametres.png" width="1904" height="717" loading="lazy" alt="Écran Journal Achats d’Owl : champs Secteur réglé sur Services, Exonéré réglé sur Avec droit déduction, bouton Compte tiers fournisseur et bouton Doc / Photo, au-dessus du tableau du journal encore vide.">
+          <figcaption>Capture de l’application&nbsp;: paramètres du dossier.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section step" id="etape-2" aria-labelledby="s2">
+      <div class="wrap step__grid">
+        <div class="step__copy" data-reveal>
+          <p class="feat__n">02</p>
+          <h2 id="s2">Importer les documents</h2>
+          <p class="lede">Un fichier qui regroupe plusieurs factures, ou des photos, chargé via «&nbsp;Doc / Photo&nbsp;».</p>
+          <ul class="feat__list">
+            <li>Toute la période en une fois, mensuelle ou trimestrielle</li>
+            <li>Le document source reste affiché, page par page</li>
+          </ul>
+        </div>
+        <figure class="shot" data-reveal>
+          <img src="assets/screens/owl-document-source.png" width="1901" height="716" loading="lazy" alt="Écran d’Owl après import : le fichier test.pdf est chargé, le bouton Analyse est disponible, et le panneau Document source affiche un ticket de paiement, page 1 sur 10.">
+          <figcaption>Capture de l’application&nbsp;: fichier de 10 pages chargé, document source affiché.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section step" id="etape-3" aria-labelledby="s3">
+      <div class="wrap step__grid">
+        <div class="step__copy" data-reveal>
+          <p class="feat__n">03</p>
+          <h2 id="s3">Owl analyse les documents</h2>
+          <p class="lede">Au clic sur «&nbsp;Analyse&nbsp;», Owl lit chaque pièce du fichier.</p>
+        </div>
+        <div class="checkcard" data-reveal>
+          <p class="checkcard__h">Ce qu’Owl relève sur chaque pièce</p>
+          <ul>
+            <li>Le fournisseur et la nature de l’opération</li>
+            <li>La date et le numéro de facture</li>
+            <li>Les montants HT, TVA et TTC</li>
+            <li>La devise, le cas échéant</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section step" id="etape-4" aria-labelledby="s4">
+      <div class="wrap step__grid">
+        <div class="step__copy" data-reveal>
+          <p class="feat__n">04</p>
+          <h2 id="s4">Owl applique le contexte de l’entreprise</h2>
+          <p class="lede">C’est ici qu’Owl dépasse l’OCR&nbsp;: les données de la pièce sont croisées avec ce que vous avez configuré.</p>
+        </div>
+        <div class="merge" data-reveal>
+          <div class="merge__in">
+            <p>Données de la facture</p>
+            <p>Activité de l’entreprise</p>
+            <p>Statut TVA</p>
+            <p>Fournisseur et RAS</p>
+          </div>
+          <div class="merge__out"><span>Traitement préparé</span><strong>Compte, compte tiers, TVA, retenue, journal</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section step" id="etape-5" aria-labelledby="s5">
+      <div class="wrap">
+        <div class="step__grid step__grid--head">
+          <div class="step__copy" data-reveal>
+            <p class="feat__n">05</p>
+            <h2 id="s5">Les écritures comptables sont préparées</h2>
+          </div>
+          <p class="lede" data-reveal>Le ticket de l’étape 2 devient une écriture complète dans le journal.</p>
+        </div>
+        <figure class="etable-wrap" data-reveal>
+          <div class="etable" role="table" aria-label="Écriture préparée à partir du ticket AFRQ D-OASISII">
+            <div class="etable__row etable__head" role="row"><span role="columnheader">Code</span><span role="columnheader">Date</span><span role="columnheader">Compte général</span><span role="columnheader">Compte tiers</span><span role="columnheader">Libellé</span><span class="r" role="columnheader">Débit</span><span class="r" role="columnheader">Crédit</span></div>
+            <div class="etable__row" role="row"><span role="cell">AC</span><span role="cell">02/04/2026</span><span role="cell">6143600000</span><span role="cell"></span><span role="cell">AFRQ D-OASISII-000101</span><span class="r" role="cell">1 185,00</span><span class="r" role="cell"></span></div>
+            <div class="etable__row" role="row"><span role="cell">AC</span><span role="cell">02/04/2026</span><span role="cell">4411000000</span><span role="cell"></span><span role="cell">AFRQ D-OASISII-000101</span><span class="r" role="cell"></span><span class="r" role="cell">1 185,00</span></div>
+            <div class="etable__row etable__total" role="row"><span role="cell"></span><span role="cell"></span><span role="cell"></span><span role="cell"></span><span role="cell">Équilibrée</span><span class="r" role="cell">1 185,00</span><span class="r" role="cell">1 185,00</span></div>
+          </div>
+          <figcaption>Écriture produite par Owl pour ce ticket.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section step" id="etape-6" aria-labelledby="s6">
+      <div class="wrap step__grid">
+        <div class="step__copy" data-reveal>
+          <p class="feat__n">06</p>
+          <h2 id="s6">Les tableaux TVA sont préparés, si nécessaire</h2>
+          <p class="lede">La préparation TVA s’appuie sur le même contexte et sur vos documents comptables. Elle produit trois tableaux.</p>
+        </div>
+        <ul class="poutputs poutputs--stack" data-reveal aria-label="Tableaux produits par la préparation TVA">
+          <li>Tableau de déduction</li><li>Tableau RAS</li><li>Tableau d’encaissement</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section step" id="etape-7" aria-labelledby="s7">
+      <div class="wrap step__grid">
+        <div class="step__copy" data-reveal>
+          <p class="feat__n">07</p>
+          <h2 id="s7">Vous contrôlez les résultats</h2>
+          <p class="lede">Rien ne part sans vous. Chaque ligne se relit à côté du document dont elle vient.</p>
+        </div>
+        <ul class="feat__list" data-reveal>
+          <li>Vérifier les comptes et les montants</li>
+          <li>Modifier une ligne ou en ajouter une</li>
+          <li>Effacer les données d’un journal et recommencer</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section step" id="etape-8" aria-labelledby="s8">
+      <div class="wrap step__grid">
+        <div class="step__copy" data-reveal>
+          <p class="feat__n">08</p>
+          <h2 id="s8">Vous exportez</h2>
+          <p class="lede">Les résultats contrôlés partent vers votre logiciel comptable. Votre façon de travailler ne change pas.</p>
+        </div>
+        <ul class="softlist" data-reveal aria-label="Logiciels vers lesquels Owl exporte">
+          <li>Sage 100</li><li>Odoo</li><li>SAP</li><li>JBS</li><li>QuickBooks</li><li>Rillet</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="wrap cta-band__inner" data-reveal>
+        <div>
+          <h2 id="cta-title">Voir la préparation des écritures en mouvement.</h2>
+          <p>La démonstration rejoue le parcours dans l’interface d’Owl.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--light" href="demo.html">Voir la démonstration</a>
+          <a class="btn btn--ghost-dark" href="demo.html#demande">Demander une démonstration</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand brand--footer" href="index.html" aria-label="Think Actionn, accueil">
+            <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.6"/></svg>
+            <span class="brand__name">THINK ACTIONN</span>
+          </a>
+          <p>Owl — Prépare vos écritures comptables.</p>
+        </div>
+        <nav class="footer__col" aria-label="Produit">
+          <p class="footer__h">Produit</p>
+          <ul>
+            <li><a href="features.html">Fonctionnalités</a></li>
+            <li><a href="how-it-works.html">Comment ça marche</a></li>
+            <li><a href="approach.html">Notre approche</a></li>
+            <li><a href="demo.html">Démonstration</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-label="Solutions">
+          <p class="footer__h">Solutions</p>
+          <ul>
+            <li><a href="accounting-firms.html">Cabinets comptables</a></li>
+            <li><a href="companies.html">Entreprises</a></li>
+          </ul>
+        </nav>
+        <div class="footer__col">
+          <p class="footer__h">Ressources</p>
+          <ul>
+            <li><span class="footer__soon">Guides et articles, bientôt</span></li>
+          </ul>
+        </div>
+        <nav class="footer__col" aria-label="Think Actionn">
+          <p class="footer__h">Think Actionn</p>
+          <ul>
+            <li><a href="demo.html#demande">Nous contacter</a></li>
+            <li><a href="mailto:contact@thinkactionn.com">contact@thinkactionn.com</a></li>
+            <li><a href="tel:+212644412524">06 44 41 25 24</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-label="Légal">
+          <p class="footer__h">Légal</p>
+          <ul>
+            <li><a href="confidentialite.html">Confidentialité</a></li>
+            <!-- TODO: ajouter « Mentions légales » et « Conditions d’utilisation » quand les textes seront rédigés. -->
+          </ul>
+        </nav>
+      </div>
+      <p class="footer__copy">© <span data-year>2026</span> Think Actionn</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
