@@ -630,13 +630,17 @@ h3 { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.01em; line-height
   .period__stack { width: 230px; }
 }
 
+/* Reduced motion: keep every animation, but replace movement with fades.
+   (Many visitors have "reduce motion" / "animations off" enabled at OS level.) */
+@keyframes rm-fade { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-  .js [data-reveal], .js .hero__product, .js .hero__side, .js .hero__stage,
-  .js .hero__title .line > span, .js .flow__steps li, .js .mini-entry tbody tr, .js .ctxcard__field { opacity: 1 !important; transform: none !important; }
-  .js .flow__band::before, .js .prog i { transform: none !important; }
-  .compare__arrow span, .pipeline__link i, .cursor { display: none; }
+  .js .hero__title .line > span, .js .hero__product, .js .hero__side, .js .hero__stage {
+    transform: none; opacity: 0; animation-name: rm-fade;
+  }
+  .js [data-reveal], .js .flow__steps li, .js .mini-entry tbody tr, .js .ctxcard__field,
+  .js .profile dl div { transform: none !important; }
+  .choose__card:hover { transform: none; }
 }
 
 /* ---------- Page organisation: audiences, privacy band, legal page ---------- */

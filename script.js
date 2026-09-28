@@ -1,5 +1,5 @@
 (function () {
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Reduced motion is handled in CSS (fades instead of movement); the product demo still plays for everyone.
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
   var money = function (n) { return n ? n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : ''; };
@@ -18,7 +18,9 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && navMenu.classList.contains('is-open')) { setMenu(false); navToggle.focus(); }
     });
-    window.matchMedia('(min-width: 1061px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
+    var wide = window.matchMedia('(min-width: 1061px)');
+    var onWide = function (m) { if (m.matches) setMenu(false); };
+    if (wide.addEventListener) wide.addEventListener('change', onWide); else if (wide.addListener) wide.addListener(onWide);
   }
 
   /* ---------- Scroll reveal + counters ---------- */
@@ -41,7 +43,7 @@
   }
 
   var revealTargets = $$('[data-reveal], [data-flow]');
-  if ('IntersectionObserver' in window && !reduceMotion) {
+  if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
@@ -195,7 +197,7 @@
       }, 30);
     };
 
-    if (reduceMotion) {
+    if (!window.Promise || !('IntersectionObserver' in window)) {
       JOURNAL.forEach(function (j, k) { fillRow(k, false); });
       setTotals(sum(JOURNAL, 6), sum(JOURNAL, 7), false);
       el.balanced.classList.add('is-show');
@@ -353,7 +355,7 @@
     var flash = function (node) { node.classList.remove('flash'); void node.offsetWidth; node.classList.add('flash'); };
     var swapText = function (node, text) {
       if (node.textContent === text) return;
-      if (reduceMotion) { node.textContent = text; return; }
+      if (!window.Promise) { node.textContent = text; return; }
       node.classList.add('is-swapping');
       setTimeout(function () { node.textContent = text; node.classList.remove('is-swapping'); }, 250);
     };
@@ -370,7 +372,7 @@
     };
 
     var STEPS = [['revente', 'avec'], ['revente', 'sans'], ['services', 'sans'], ['services', 'avec']];
-    var step = 0, autoTimer = null, playing = !reduceMotion, demoVisible = false;
+    var step = 0, autoTimer = null, playing = true, demoVisible = false;
     var restartBar = function () { bar.classList.remove('is-running'); void bar.offsetWidth; bar.classList.add('is-running'); };
     var tick = function () {
       if (!playing) return;
@@ -526,4 +528,5 @@
 
   var year = $('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
+  window.__owlReady = true;
 })();
