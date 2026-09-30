@@ -1074,3 +1074,12 @@ a[href^="mailto:"], a[href^="tel:"] { white-space: nowrap; overflow-wrap: normal
 .offer__list li::before { content: ""; position: absolute; left: 2px; top: .38em; width: 12px; height: 7px; border-left: 1.8px solid var(--ember); border-bottom: 1.8px solid var(--ember); transform: rotate(-45deg); }
 .offer--dark .offer__list li { color: #e2e2de; }
 @media (max-width: 960px) { .offers { grid-template-columns: minmax(0, 1fr); } }
+/* ---------- Pillar detail lists (per journal / per tax table) ---------- */
+.pillar__list { margin-top: 26px; border-top: 1px solid var(--line); }
+.pillar--tva .pillar__list { border-top-color: #2a2a2a; }
+.pillar__list > div { display: grid; grid-template-columns: minmax(0, 150px) minmax(0, 1fr); gap: 4px 20px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.pillar--tva .pillar__list > div { border-bottom-color: #2a2a2a; }
+.pillar__list dt { font-weight: 600; }
+.pillar__list dd { color: var(--stone); font-size: .9375rem; line-height: 1.5; }
+.pillar--tva .pillar__list dd { color: #c9c9c5; }
+@media (max-width: 560px) { .pillar__list > div { grid-template-columns: minmax(0, 1fr); } }
