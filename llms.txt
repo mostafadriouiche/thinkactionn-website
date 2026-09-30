@@ -17,7 +17,7 @@ Données : chiffrées, traitées selon la loi 09-08 (CNDP), jamais utilisées po
 - [Fonctionnalités](https://www.thinkactionn.com/features): les deux capacités en détail
 - [Comment ça marche](https://www.thinkactionn.com/how-it-works): les huit étapes, du document à l'export
 - [Notre approche](https://www.thinkactionn.com/approach): pourquoi Owl part du contexte de l'entreprise
-- [OCR vs Owl](https://www.thinkactionn.com/ocr-comptable-maroc): comparaison OCR simple et Owl, fiscalité marocaine, FAQ
+- [OCR vs Owl](https://www.thinkactionn.com/ocr-comptable-maroc): comparaisons OCR simple vs Owl et pré-comptabilité vs Owl, fiscalité marocaine, FAQ
 - [Cabinets comptables](https://www.thinkactionn.com/accounting-firms): Owl pour les cabinets
 - [Entreprises](https://www.thinkactionn.com/companies): Owl pour les entreprises
 - [Démonstration](https://www.thinkactionn.com/demo): démonstration et demande de contact
