@@ -1053,3 +1053,24 @@ a[href^="mailto:"], a[href^="tel:"] { white-space: nowrap; overflow-wrap: normal
 .faq__list summary:hover h3 { text-decoration: underline; text-decoration-color: var(--ember); text-underline-offset: 5px; }
 .faq__a { padding: 0 40px 26px 0; color: #33332f; max-width: 44em; }
 @media (max-width: 960px) { .faq__grid { grid-template-columns: minmax(0, 1fr); } .faq__head { position: static; } }
+/* ---------- Offer cards (Entreprises / Cabinets) ---------- */
+.offers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+.offer { display: flex; flex-direction: column; padding: clamp(28px, 3.2vw, 40px); border: 1px solid var(--line); border-radius: 16px; background: var(--paper); }
+.offer--dark { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.offer__icon { width: 44px; height: 44px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 26px; }
+.offer h3 { font-size: clamp(1.7rem, 2.4vw, 2.1rem); font-weight: 500; letter-spacing: -0.025em; line-height: 1.1; }
+.offer__for { margin-top: 6px; color: var(--stone); }
+.offer--dark .offer__for { color: var(--mist); }
+.offer__cta { display: grid; gap: 10px; margin-top: 28px; }
+.offer__btn { width: 100%; height: 48px; justify-content: center; }
+.offer__btn--quiet { display: inline-flex; align-items: center; border-radius: 999px; font-weight: 500; text-decoration: none; background: var(--wash); color: var(--ink); transition: background-color .15s; }
+.offer__btn--quiet:hover { background: #ebebe7; }
+.offer--dark .offer__btn--quiet { background: #1e1e1e; color: var(--paper); }
+.offer--dark .offer__btn--quiet:hover { background: #2a2a2a; }
+.offer__lead { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); font-weight: 600; }
+.offer--dark .offer__lead { border-top-color: #2a2a2a; }
+.offer__list { display: grid; gap: 11px; margin-top: 16px; }
+.offer__list li { position: relative; padding-left: 28px; line-height: 1.45; }
+.offer__list li::before { content: ""; position: absolute; left: 2px; top: .38em; width: 12px; height: 7px; border-left: 1.8px solid var(--ember); border-bottom: 1.8px solid var(--ember); transform: rotate(-45deg); }
+.offer--dark .offer__list li { color: #e2e2de; }
+@media (max-width: 960px) { .offers { grid-template-columns: minmax(0, 1fr); } }
