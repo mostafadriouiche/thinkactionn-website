@@ -5,7 +5,7 @@
 Owl n'est ni un ERP ni un simple OCR comptable. Il a deux capacités, fondées sur le même contexte d'entreprise :
 
 1. Préparation des écritures comptables : import d'un fichier de plusieurs factures (PDF ou photos), analyse, écritures équilibrées conformes au Plan Comptable Général Marocain (CGNC), dans le bon journal (achats, ventes, banque, caisse, opérations diverses).
-2. Préparation TVA : tableau de déduction, tableau RAS, tableau d'encaissement et relevé des déductions au format EDI de la DGI (ADC080F). Application du Code Général des Impôts : déductibilité et prorata de TVA, retenue à la source, vérification ICE/IF des fournisseurs, plafond des paiements en espèces (article 11 du CGI).
+2. Préparation TVA : tableau de déduction, tableau RAS, tableau d'encaissement et relevé des déductions au format EDI de la DGI. Application du Code Général des Impôts : déductibilité et prorata de TVA, retenue à la source, vérification ICE/IF des fournisseurs, plafond des paiements en espèces (article 11 du CGI).
 
 Export vers : Sage, Odoo, SAP, JBS, QuickBooks, Rillet.
 Public : cabinets comptables et entreprises au Maroc.

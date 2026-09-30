@@ -78,7 +78,7 @@
           "Conformité au Plan Comptable Général Marocain (PCGM)",
           "Application des règles fiscales du Code Général des Impôts (CGI) et de la loi de finances",
           "Calcul automatique de la TVA : déductibilité totale, partielle (prorata de TVA) ou non déductible",
-          "Préparation du relevé des déductions au format EDI DGI (ADC080F)",
+          "Préparation du relevé des déductions au format EDI DGI",
           "Vérification de l'ICE et de l'IF des fournisseurs",
           "Contrôle du plafond légal des paiements en espèces (article 11 du CGI)",
           "Tableau de déduction, tableau RAS et tableau d'encaissement",
@@ -98,7 +98,7 @@
           {
             "@type": "Question",
             "name": "Comment Owl gère-t-il les spécificités de la fiscalité marocaine (TVA, CGI, PCGM) ?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Owl intègre le Code Général des Impôts (CGI) et le Plan Comptable Général Marocain (PCGM). Il détermine si une dépense est totalement déductible, partiellement déductible (application du prorata de TVA) ou non déductible. Il prépare votre relevé des déductions au format EDI de la DGI (ADC080F) et contrôle le respect du plafond légal des paiements en espèces (article 11 du CGI)." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Owl intègre le Code Général des Impôts (CGI) et le Plan Comptable Général Marocain (PCGM). Il détermine si une dépense est totalement déductible, partiellement déductible (application du prorata de TVA) ou non déductible. Il prépare votre relevé des déductions au format EDI de la DGI et contrôle le respect du plafond légal des paiements en espèces (article 11 du CGI)." }
           },
           {
             "@type": "Question",
@@ -286,7 +286,7 @@
           <ul>
             <li>Owl est le produit de Think Actionn, société marocaine d'intelligence artificielle et d'automatisation.</li>
             <li>Owl dépasse la saisie automatique de factures&nbsp;: il applique le Plan Comptable Général Marocain (PCGM) et le Code Général des Impôts (CGI).</li>
-            <li>Il calcule la TVA déductible, y compris le prorata de TVA, et prépare le relevé des déductions EDI (ADC080F).</li>
+            <li>Il calcule la TVA déductible, y compris le prorata de TVA, et prépare le relevé des déductions EDI.</li>
             <li>Il vérifie l'ICE et l'IF des fournisseurs et le plafond des paiements en espèces (article 11 du CGI).</li>
             <li>Les écritures validées s'exportent vers Sage Comptabilité ou votre logiciel habituel.</li>
           </ul>
@@ -329,13 +329,13 @@
           <ul>
             <li>Owl automatise la pré-comptabilité : les écritures sont préparées à partir de vos factures.</li>
             <li>Les écritures suivent le Plan Comptable Général Marocain, issu du CGNC.</li>
-            <li>La préparation des déclarations DGI est automatisée : dossier TVA et relevé des déductions EDI (ADC080F).</li>
+            <li>La préparation des déclarations DGI est automatisée : dossier TVA et relevé des déductions EDI.</li>
             <li>Les règles appliquées sont celles du CGI en vigueur, tel que modifié par les lois de finances.</li>
           </ul>
         </aside>
         <div class="grid">
           <article class="card"><h3>Préparation comptable complète</h3><p>Écritures de tous les journaux (achats, ventes, banque, caisse, OD), conformes au CGNC, prêtes à être contrôlées.</p></article>
-          <article class="card"><h3>Préparation fiscale complète</h3><p>Tableau de déduction, tableau RAS, tableau d'encaissement et relevé EDI ADC080F pour vos déclarations DGI.</p></article>
+          <article class="card"><h3>Préparation fiscale complète</h3><p>Tableau de déduction, tableau RAS, tableau d'encaissement et relevé EDI pour vos déclarations DGI.</p></article>
           <article class="card card--dark"><h3>CGI et loi de finances</h3><p>Déductibilité et prorata de TVA, retenue à la source, ICE/IF, article 11 du CGI.</p></article>
         </div>
       </div>
@@ -357,7 +357,7 @@
               <tr><th scope="row">Contexte de l'entreprise</th><td>Non pris en compte</td><td>Activité, régime fiscal et droit à déduction</td></tr>
               <tr><th scope="row">Plan Comptable Général Marocain (PCGM)</th><td>Imputation à faire à la main</td><td>Imputation comptable préparée</td></tr>
               <tr><th scope="row">Déductibilité de la TVA</th><td>Non déterminée</td><td>Totale, partielle (prorata de TVA) ou non déductible</td></tr>
-              <tr><th scope="row">Relevé des déductions EDI (ADC080F)</th><td>Non</td><td>Préparé au format EDI de la DGI</td></tr>
+              <tr><th scope="row">Relevé des déductions EDI</th><td>Non</td><td>Préparé au format EDI de la DGI</td></tr>
               <tr><th scope="row">Vérification ICE / IF du fournisseur</th><td>Non</td><td>Oui</td></tr>
               <tr><th scope="row">Plafond des paiements en espèces (art. 11 CGI)</th><td>Non</td><td>Contrôlé</td></tr>
               <tr><th scope="row">Export</th><td>Données brutes</td><td>Écritures équilibrées, compatibles Sage Comptabilité</td></tr>
@@ -400,7 +400,7 @@
           <p class="tldr__h" id="tldr-tax">L'essentiel</p>
           <ul>
             <li>Déductibilité de la TVA et prorata de TVA déterminés automatiquement.</li>
-            <li>Relevé des déductions préparé au format EDI de la DGI (ADC080F).</li>
+            <li>Relevé des déductions préparé au format EDI de la DGI.</li>
             <li>ICE, IF et plafond des paiements en espèces (article 11 du CGI) contrôlés.</li>
           </ul>
         </aside>
@@ -409,8 +409,8 @@
             <h3>Déductibilité et prorata de TVA</h3>
             <p>Pour chaque dépense, Owl détermine si la TVA est totalement déductible, partiellement déductible par application du prorata, ou non déductible.</p>
           </article>
-          <article class="card" data-keyword="Relevé des déductions EDI (ADC080F)">
-            <h3>Relevé des déductions EDI (ADC080F)</h3>
+          <article class="card" data-keyword="Relevé des déductions EDI">
+            <h3>Relevé des déductions EDI</h3>
             <p>Owl prépare votre relevé des déductions au format EDI de la DGI, à partir des factures et du contexte de l'entreprise.</p>
           </article>
           <article class="card" data-keyword="Vérification automatique ICE / IF et plafond de paiement espèces (Art 11 CGI)">
@@ -438,7 +438,7 @@
             <span class="num">02</span>
             <h3>Préparation TVA</h3>
             <p>Owl prépare vos tableaux TVA à partir de vos factures et du contexte de l'entreprise.</p>
-            <ul class="chips"><li>Tableau de déduction</li><li>Tableau RAS</li><li>Tableau d'encaissement</li><li>Relevé EDI ADC080F</li></ul>
+            <ul class="chips"><li>Tableau de déduction</li><li>Tableau RAS</li><li>Tableau d'encaissement</li><li>Relevé EDI</li></ul>
           </article>
         </div>
       </div>
@@ -471,7 +471,7 @@
         </details>
         <details>
           <summary><h3>Comment Owl gère-t-il les spécificités de la fiscalité marocaine (TVA, CGI, PCGM) ?</h3></summary>
-          <div class="answer"><p>Owl intègre le Code Général des Impôts (CGI) et le Plan Comptable Général Marocain (PCGM). Il détermine si une dépense est totalement déductible, partiellement déductible (application du prorata de TVA) ou non déductible. Il prépare votre relevé des déductions au format EDI de la DGI (ADC080F) et contrôle le respect du plafond légal des paiements en espèces (article 11 du CGI).</p></div>
+          <div class="answer"><p>Owl intègre le Code Général des Impôts (CGI) et le Plan Comptable Général Marocain (PCGM). Il détermine si une dépense est totalement déductible, partiellement déductible (application du prorata de TVA) ou non déductible. Il prépare votre relevé des déductions au format EDI de la DGI et contrôle le respect du plafond légal des paiements en espèces (article 11 du CGI).</p></div>
         </details>
         <details>
           <summary><h3>Owl peut-il s'intégrer avec nos logiciels existants comme Sage Comptabilité ?</h3></summary>
