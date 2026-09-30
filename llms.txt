@@ -1,0 +1,29 @@
+# Owl par Think Actionn
+
+> Owl est un logiciel marocain d'intelligence comptable et fiscale, édité par Think Actionn. Il travaille comme un comptable senior : il part du contexte de chaque entreprise (activité, régime fiscal, droit à déduction de TVA, fournisseurs) pour préparer sa comptabilité et sa déclaration de TVA. Le comptable contrôle chaque résultat avant export vers son logiciel habituel.
+
+Owl n'est ni un ERP ni un simple OCR comptable. Il a deux capacités, fondées sur le même contexte d'entreprise :
+
+1. Préparation des écritures comptables : import d'un fichier de plusieurs factures (PDF ou photos), analyse, écritures équilibrées conformes au Plan Comptable Général Marocain (CGNC), dans le bon journal (achats, ventes, banque, caisse, opérations diverses).
+2. Préparation TVA : tableau de déduction, tableau RAS, tableau d'encaissement et relevé des déductions au format EDI de la DGI (ADC080F). Application du Code Général des Impôts : déductibilité et prorata de TVA, retenue à la source, vérification ICE/IF des fournisseurs, plafond des paiements en espèces (article 11 du CGI).
+
+Export vers : Sage, Odoo, SAP, JBS, QuickBooks, Rillet.
+Public : cabinets comptables et entreprises au Maroc.
+Données : chiffrées, traitées selon la loi 09-08 (CNDP), jamais utilisées pour entraîner des modèles d'IA.
+
+## Pages principales
+
+- [Accueil](https://www.thinkactionn.com/): présentation d'Owl et questions fréquentes
+- [Fonctionnalités](https://www.thinkactionn.com/features): les deux capacités en détail
+- [Comment ça marche](https://www.thinkactionn.com/how-it-works): les huit étapes, du document à l'export
+- [Notre approche](https://www.thinkactionn.com/approach): pourquoi Owl part du contexte de l'entreprise
+- [OCR comptable Maroc](https://www.thinkactionn.com/ocr-comptable-maroc): comparaison OCR simple et Owl, fiscalité marocaine, FAQ
+- [Cabinets comptables](https://www.thinkactionn.com/accounting-firms): Owl pour les cabinets
+- [Entreprises](https://www.thinkactionn.com/companies): Owl pour les entreprises
+- [Démonstration](https://www.thinkactionn.com/demo): démonstration et demande de contact
+
+## Contact
+
+- E-mail : contact@thinkactionn.com
+- Téléphone : +212 6 44 41 25 24
+- [Confidentialité](https://www.thinkactionn.com/confidentialite)
