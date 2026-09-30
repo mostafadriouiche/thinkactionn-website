@@ -68,9 +68,11 @@
         "publisher": { "@id": "https://www.thinkactionn.com/#organization" },
         "description": "Owl est un moteur d'intelligence comptable et fiscale pour le Maroc. Au-delà de l'OCR comptable, il analyse l'activité et le régime fiscal de l'entreprise, applique le Plan Comptable Général Marocain (PCGM) et le Code Général des Impôts (CGI), et prépare des écritures comptables équilibrées que le comptable contrôle avant export.",
         "featureList": [
-          "Saisie automatique de factures et analyse des documents comptables",
+          "Automatisation de la pré-comptabilité et saisie automatique de factures",
+          "Préparation comptable complète conforme au CGNC",
+          "Préparation fiscale complète et préparation des déclarations DGI",
           "Conformité au Plan Comptable Général Marocain (PCGM)",
-          "Application des règles fiscales du Code Général des Impôts (CGI)",
+          "Application des règles fiscales du Code Général des Impôts (CGI) et de la loi de finances",
           "Calcul automatique de la TVA : déductibilité totale, partielle (prorata de TVA) ou non déductible",
           "Préparation du relevé des déductions au format EDI DGI (ADC080F)",
           "Vérification de l'ICE et de l'IF des fournisseurs",
@@ -231,6 +233,7 @@
     footer ul { display: flex; flex-wrap: wrap; gap: 8px 20px; }
     footer a { color: var(--mist); text-decoration: none; }
     footer a:hover { color: var(--paper); }
+    a[href^="mailto:"], a[href^="tel:"] { white-space: nowrap; }
 
     @media (max-width: 900px) {
       .head, .grid, .grid--2 { grid-template-columns: minmax(0, 1fr); }
@@ -306,6 +309,30 @@
           <article class="card"><h3>Ce que lit un OCR</h3><p>Le fournisseur, le numéro, la date, le montant HT, la TVA et le total TTC.</p></article>
           <article class="card"><h3>Ce qu'il laisse au comptable</h3><p>Le compte, la déductibilité de la TVA, le prorata, le contrôle du fournisseur et du mode de paiement.</p></article>
           <article class="card card--dark"><h3>Ce que prépare Owl</h3><p>Le traitement complet de la pièce, selon l'activité et le régime fiscal de votre entreprise.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Target searches: pré-comptabilité, automatisation comptable, DGI, CGNC, loi de finances -->
+    <section id="automatisation" aria-labelledby="h-auto" data-keyword="Pré-comptabilité, automatisation comptable, automatisation déclaration DGI, CGNC, loi de finances">
+      <div class="wrap">
+        <div class="head">
+          <h2 id="h-auto">Pré-comptabilité et automatisation comptable au Maroc</h2>
+          <p class="lede">Une préparation comptable complète et une préparation fiscale complète, conformes au CGNC, au CGI et à la loi de finances.</p>
+        </div>
+        <aside class="tldr" aria-labelledby="tldr-auto">
+          <p class="tldr__h" id="tldr-auto">L'essentiel</p>
+          <ul>
+            <li>Owl automatise la pré-comptabilité : les écritures sont préparées à partir de vos factures.</li>
+            <li>Les écritures suivent le Plan Comptable Général Marocain, issu du CGNC.</li>
+            <li>La préparation des déclarations DGI est automatisée : dossier TVA et relevé des déductions EDI (ADC080F).</li>
+            <li>Les règles appliquées sont celles du CGI en vigueur, tel que modifié par les lois de finances.</li>
+          </ul>
+        </aside>
+        <div class="grid">
+          <article class="card"><h3>Préparation comptable complète</h3><p>Écritures de tous les journaux (achats, ventes, banque, caisse, OD), conformes au CGNC, prêtes à être contrôlées.</p></article>
+          <article class="card"><h3>Préparation fiscale complète</h3><p>Tableau de déduction, tableau RAS, tableau d'encaissement et relevé EDI ADC080F pour vos déclarations DGI.</p></article>
+          <article class="card card--dark"><h3>CGI et loi de finances</h3><p>Déductibilité et prorata de TVA, retenue à la source, ICE/IF, article 11 du CGI.</p></article>
         </div>
       </div>
     </section>
@@ -477,7 +504,7 @@
           <li><a href="/approach">Notre approche</a></li>
           <li><a href="/confidentialite">Confidentialité</a></li>
           <li><a href="mailto:contact@thinkactionn.com">contact@thinkactionn.com</a></li>
-          <li><a href="tel:+212644412524">06 44 41 25 24</a></li>
+          <li><a href="tel:+212644412524">+212 6 44 41 25 24</a></li>
         </ul>
       </nav>
     </div>
