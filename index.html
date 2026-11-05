@@ -23,7 +23,7 @@
   <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__owlReady)document.documentElement.classList.remove('js')},4000)</script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
-    {"@type":"Organization","@id":"https://www.thinkactionn.com/#organization","name":"Think Actionn","url":"https://www.thinkactionn.com/","logo":"https://www.thinkactionn.com/assets/logo.svg","email":"contact@thinkactionn.com","telephone":"+212644412524","areaServed":{"@type":"Country","name":"Maroc"},"brand":{"@id":"https://www.thinkactionn.com/#owl"}},
+    {"@type":"Organization","@id":"https://www.thinkactionn.com/#organization","name":"Think Actionn","url":"https://www.thinkactionn.com/","logo":"https://www.thinkactionn.com/assets/logo.svg","email":"contact@thinkactionn.com","telephone":"+212644412524","sameAs":["https://www.linkedin.com/company/146743879/"],"areaServed":{"@type":"Country","name":"Maroc"},"brand":{"@id":"https://www.thinkactionn.com/#owl"}},
     {"@type":"SoftwareApplication","@id":"https://www.thinkactionn.com/#owl","name":"Owl","alternateName":"Owl par Think Actionn","url":"https://www.thinkactionn.com/","applicationCategory":"BusinessApplication","inLanguage":"fr","countriesSupported":"MA","creator":{"@id":"https://www.thinkactionn.com/#organization"},"description":"Owl travaille comme un comptable senior : il part du contexte de chaque entreprise marocaine pour préparer sa comptabilité et sa déclaration de TVA. Automatisation de la pré-comptabilité, préparation comptable et fiscale complète conforme au CGNC (PCGM), au CGI et à la loi de finances, préparation des déclarations DGI (relevé des déductions EDI), export vers Sage.","slogan":"Le comptable senior de chaque entreprise marocaine."},
     {"@type":"FAQPage","@id":"https://www.thinkactionn.com/#faq","mainEntity":[{"@type":"Question","name":"Qu’est-ce qu’Owl par Think Actionn ?","acceptedAnswer":{"@type":"Answer","text":"Owl travaille comme un comptable senior. Avant de traiter la moindre facture, il comprend votre entreprise : son activité, son régime fiscal, ses fournisseurs. Il prépare ensuite votre comptabilité et votre déclaration de TVA, que vous contrôlez avant export."}},{"@type":"Question","name":"Pourquoi Owl commence-t-il par le contexte de l’entreprise ?","acceptedAnswer":{"@type":"Answer","text":"Parce que chaque entreprise est différente. La même facture ne se comptabilise pas de la même façon selon l’activité, le droit à déduction de TVA ou le prorata, et selon que le fournisseur est soumis à la retenue à la source. Owl tient compte de ce contexte pour chaque pièce, comme le ferait un comptable qui connaît le dossier."}},{"@type":"Question","name":"Qu’est-ce qui distingue Owl d’un outil qui lit les factures ?","acceptedAnswer":{"@type":"Answer","text":"Un outil de lecture recopie ce qui est écrit : fournisseur, date, montants. Owl raisonne sur la pièce : quel compte, quelle TVA récupérable, quel compte tiers, quelle retenue, quel journal. Il ne livre pas des champs, il livre un traitement comptable et fiscal."}},{"@type":"Question","name":"Comment Owl prépare-t-il ma comptabilité ?","acceptedAnswer":{"@type":"Answer","text":"Vous importez vos factures, en PDF ou en photos. Owl prépare des écritures complètes et équilibrées selon le Plan Comptable Général Marocain, dans le bon journal : achats, ventes, banque, caisse ou opérations diverses. Pour les achats, la même facture donne une écriture différente selon votre activité, votre régime fiscal et les règles de TVA et de RAS du fournisseur. Les factures en devises sont repérées sans aucun réglage et converties en dirhams au cours officiel de Bank Al-Maghrib à la date de la facture."}},{"@type":"Question","name":"Comment Owl prépare-t-il ma déclaration de TVA ?","acceptedAnswer":{"@type":"Answer","text":"À partir de vos factures et du contexte de l’entreprise, Owl prépare le tableau de déduction, le tableau RAS, le tableau d’encaissement et le relevé des déductions au format EDI de la DGI. Il applique le prorata de TVA, vérifie l’ICE et l’IF des fournisseurs et contrôle le plafond des paiements en espèces."}},{"@type":"Question","name":"Qui garde la décision finale ?","acceptedAnswer":{"@type":"Answer","text":"Vous. Owl prépare le travail d’un comptable senior, vous le relisez, le corrigez si besoin et le validez. Rien n’est exporté sans votre accord."}},{"@type":"Question","name":"Dois-je changer de logiciel comptable ?","acceptedAnswer":{"@type":"Answer","text":"Non. Owl prépare le travail en amont, puis exporte vos écritures vers le logiciel que vous utilisez déjà : Sage, Odoo, SAP, JBS, QuickBooks ou Rillet."}}]}
   ]}
@@ -72,7 +72,7 @@
           </p>
           <h1 id="hero-title" class="hero__title">
             <span class="line"><span>Owl prépare vos écritures</span></span>
-            <span class="line"><span>comptables et fiscales.</span></span>
+            <span class="line"><span>comptables et fiscales</span></span>
           </h1>
         </div>
         <div class="hero__side">
@@ -113,7 +113,7 @@
               <!-- sidebar -->
               <aside class="dash__side">
                 <div class="dash__brand"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/></svg><b>THINK ACTIONN</b></div>
-                <p class="dash__group">TOUS LES JOURNAUX <svg viewBox="0 0 10 10"><path d="M2 6.5 5 3.5l3 3"/></svg></p>
+                <p class="dash__group">Tous les journaux <svg viewBox="0 0 10 10"><path d="M2 6.5 5 3.5l3 3"/></svg></p>
                 <ul class="dash__nav">
                   <li class="is-active" data-nav="journal"><svg viewBox="0 0 16 16"><path d="M1.5 2h2l1.6 8h7.4l1.5-5.5H4.3"/><circle cx="6" cy="13" r="1"/><circle cx="12" cy="13" r="1"/></svg>Journal Achats</li>
                   <li><svg viewBox="0 0 16 16"><path d="M1.5 11.5 6 7l3 3 5.5-5.5M10.5 4.5h4v4"/></svg>Journal Ventes</li>
@@ -121,7 +121,7 @@
                   <li><svg viewBox="0 0 16 16"><rect x="2.5" y="4" width="11" height="9" rx="1"/><path d="M4.5 4V2.5h7V4M10 8.5h1.5"/></svg>Journal Caisse</li>
                   <li><svg viewBox="0 0 16 16"><path d="m8 2 6.5 3.2L8 8.4 1.5 5.2zM1.5 8 8 11.2 14.5 8M1.5 10.8 8 14l6.5-3.2"/></svg>Journal OD</li>
                 </ul>
-                <p class="dash__group dash__group--two">PRÉPARATION FISCALE <svg viewBox="0 0 10 10"><path d="M2 6.5 5 3.5l3 3"/></svg></p>
+                <p class="dash__group dash__group--two">Préparation fiscale <svg viewBox="0 0 10 10"><path d="M2 6.5 5 3.5l3 3"/></svg></p>
                 <ul class="dash__nav">
                   <li data-nav="deduction"><svg viewBox="0 0 16 16"><path d="m3 13 10-10"/><circle cx="4.5" cy="4.5" r="1.5"/><circle cx="11.5" cy="11.5" r="1.5"/></svg>Tableau de déduction TVA</li>
                   <li data-nav="encaissement"><svg viewBox="0 0 16 16"><circle cx="6" cy="6" r="3.5"/><circle cx="10.5" cy="10.5" r="3.5"/></svg>Tableau d’encaissement</li>
@@ -133,8 +133,8 @@
               <div class="dash__main" data-dash-main>
                 <div class="dash__top">
                   <svg class="dash__burger" viewBox="0 0 16 16"><path d="M2 4h12M2 8h12M2 12h12"/></svg>
-                  <span class="dash__crumb" data-crumb>JOURNAL : JOURNAL ACHATS</span>
-                  <span class="dash__jsel"><b data-jsel>JOURNAL ACHATS</b> <svg viewBox="0 0 10 10"><path d="m2.5 3.8 2.5 2.5 2.5-2.5"/></svg></span>
+                  <span class="dash__crumb" data-crumb>Journal : Journal achats</span>
+                  <span class="dash__jsel"><b data-jsel>Journal achats</b> <svg viewBox="0 0 10 10"><path d="m2.5 3.8 2.5 2.5 2.5-2.5"/></svg></span>
                 </div>
 
                 <!-- journal view -->
@@ -142,24 +142,24 @@
                   <div class="dash__toolbar">
                     <div class="dash__search"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg>Rechercher…</div>
                     <div class="dash__field" data-target="sector">
-                      <label>SECTEUR</label>
-                      <span class="dash__select"><b>SERVICES</b><svg viewBox="0 0 10 10"><path d="m2.5 3.8 2.5 2.5 2.5-2.5"/></svg></span>
+                      <label>Secteur</label>
+                      <span class="dash__select"><b>Services</b><svg viewBox="0 0 10 10"><path d="m2.5 3.8 2.5 2.5 2.5-2.5"/></svg></span>
                     </div>
                     <div class="dash__field" data-target="exo">
-                      <label>EXONÉRÉ</label>
-                      <span class="dash__select dash__select--wide"><b data-exo>AVEC DROIT DEDUCTION</b><svg viewBox="0 0 10 10"><path d="m2.5 3.8 2.5 2.5 2.5-2.5"/></svg></span>
-                      <ul class="dd" data-dd><li class="is-on">AVEC DROIT DEDUCTION</li><li>SANS DROIT DEDUCTION</li></ul>
+                      <label>Exonéré</label>
+                      <span class="dash__select dash__select--wide"><b data-exo>Avec droit à déduction</b><svg viewBox="0 0 10 10"><path d="m2.5 3.8 2.5 2.5 2.5-2.5"/></svg></span>
+                      <ul class="dd" data-dd><li class="is-on">Avec droit à déduction</li><li>Sans droit à déduction</li></ul>
                     </div>
-                    <div class="dash__btn" data-target="tiers"><svg viewBox="0 0 16 16"><path d="M4 1.5h5.5L13 5v9.5H4z"/><path d="M9.5 1.5V5H13M6.5 8.5h4M6.5 11h4"/></svg>COMPTE TIERS FOURNISSEUR</div>
+                    <div class="dash__btn" data-target="tiers"><svg viewBox="0 0 16 16"><path d="M4 1.5h5.5L13 5v9.5H4z"/><path d="M9.5 1.5V5H13M6.5 8.5h4M6.5 11h4"/></svg>Compte tiers fournisseur</div>
                     <div class="dash__upslot">
                       <div class="dash__upload" data-target="upload"><svg viewBox="0 0 16 16"><path d="M4 1.5h5.5L13 5v9.5H4z"/><path d="M9.5 1.5V5H13M8.5 12V8M6.5 10l2-2 2 2"/></svg>Doc / Photo</div>
                       <div class="dash__loaded" data-loaded>
                         <span class="dash__chip">factures_janv-mai_2026.pdf <i>×</i></span>
-                        <span class="dash__analyse" data-target="analyse">ANALYSE</span>
+                        <span class="dash__analyse" data-target="analyse">Analyse</span>
                       </div>
                     </div>
                     <div class="tiers-pop" data-tierspop>
-                      <p>COMPTES TIERS FOURNISSEURS</p>
+                      <p>Comptes tiers fournisseurs</p>
                       <ul>
                         <li><span>SRM-CS</span><b>4411L001</b></li>
                         <li><span>BATILOU</span><b>4411B014</b></li>
@@ -171,35 +171,35 @@
                     </div>
                   </div>
                   <div class="dash__actions">
-                    <span class="dash__export" data-export><svg viewBox="0 0 16 16"><path d="M4 1.5h5.5L13 5v9.5H4z"/><path d="M9.5 1.5V5H13"/></svg>EXPORTER <svg viewBox="0 0 10 10"><path d="m2.5 3.8 2.5 2.5 2.5-2.5"/></svg></span>
+                    <span class="dash__export" data-export><svg viewBox="0 0 16 16"><path d="M4 1.5h5.5L13 5v9.5H4z"/><path d="M9.5 1.5V5H13"/></svg>Exporter <svg viewBox="0 0 10 10"><path d="m2.5 3.8 2.5 2.5 2.5-2.5"/></svg></span>
                     <span class="dash__vsep"></span>
-                    <span class="dash__clear" data-target="clear">EFFACER LES DONNÉES</span>
+                    <span class="dash__clear" data-target="clear">Effacer les données</span>
                   </div>
 
                   <div class="dash__content" data-content>
                     <div class="docpanel" data-docpanel>
-                      <div class="docpanel__head"><span><i></i>DOCUMENT SOURCE</span><b data-target="closedoc">×</b></div>
+                      <div class="docpanel__head"><span><i></i>Document source</span><b data-target="closedoc">×</b></div>
                       <div class="docpanel__body">
                         <div class="docpaper" data-docpaper></div>
                         <div class="docpanel__scan" data-scan></div>
                       </div>
-                      <div class="docpanel__foot"><span class="pgbtn">‹</span><b>PAGE <span data-page>1</span> / 10</b><span class="pgbtn pgbtn--on">›</span></div>
+                      <div class="docpanel__foot"><span class="pgbtn">‹</span><b>Page <span data-page>1</span> / 10</b><span class="pgbtn pgbtn--on">›</span></div>
                     </div>
 
                     <div class="dash__table">
                       <div class="dt__scroll">
                         <div class="dt__inner">
                           <div class="dt__row dt__head">
-                            <span>CODE JOURNAL</span><span>DATE DE FACTURE</span><span>N° DE COMPTE GÉNÉRAL</span><span>N° COMPTE TIERS</span><span>LIBELLÉ D’ÉCRITURE</span><span>COMPTE TIERS</span><span>N° DE FACTURE</span><span class="r">DÉBIT</span><span class="r">CRÉDIT</span>
+                            <span>Code</span><span>Date</span><span>Compte général</span><span>N° tiers</span><span>Libellé d’écriture</span><span>Compte tiers</span><span>N° facture</span><span class="r">Débit</span><span class="r">Crédit</span>
                           </div>
-                          <div class="dt__add"><svg viewBox="0 0 12 12"><path d="M6 1.5v9M1.5 6h9"/></svg>AJOUTER UNE LIGNE</div>
+                          <div class="dt__add"><svg viewBox="0 0 12 12"><path d="M6 1.5v9M1.5 6h9"/></svg>Ajouter une ligne</div>
                           <div class="dt__body"><div class="dt__rows" data-rows></div></div>
                         </div>
                       </div>
                       <div class="dt__hbar" data-hbar><i></i></div>
                       <div class="dt__foot">
-                        <span>DÉBIT&nbsp;:</span><b data-tdebit>0,00</b>
-                        <span>CRÉDIT&nbsp;:</span><b data-tcredit class="is-credit">0,00</b>
+                        <span>Débit&nbsp;:</span><b data-tdebit>0,00</b>
+                        <span>Crédit&nbsp;:</span><b data-tcredit class="is-credit">0,00</b>
                         <em class="dt__balanced" data-balanced><span data-linecount>40</span> lignes, écritures équilibrées</em>
                       </div>
                     </div>
@@ -235,19 +235,29 @@
           <ul class="marquee__track">
             <li>Sage 100</li><li>Odoo</li><li>SAP</li><li>JBS</li><li>QuickBooks</li><li>Rillet</li>
           </ul>
-          <ul class="marquee__track" aria-hidden="true">
-            <li>Sage 100</li><li>Odoo</li><li>SAP</li><li>JBS</li><li>QuickBooks</li><li>Rillet</li>
-          </ul>
         </div>
       </div>
     </section>
 
 
+    <!-- OWL IN FIGURES (facts stated elsewhere on the site; add usage figures once measured) -->
+    <section class="stats" aria-labelledby="stats-title">
+      <div class="wrap">
+        <h2 id="stats-title" class="stats__title">Owl en chiffres</h2>
+        <dl class="stats__grid">
+          <div data-reveal><dt>Journaux préparés</dt><dd><span class="stats__n">5</span><span class="stats__d">Achats, ventes, banque, caisse et opérations diverses</span></dd></div>
+          <div data-reveal><dt>États TVA préparés</dt><dd><span class="stats__n">4</span><span class="stats__d">Tableau de déduction, tableau RAS, tableau d’encaissement et relevé EDI pour SIMPL-TVA</span></dd></div>
+          <div data-reveal><dt>Logiciels d’export</dt><dd><span class="stats__n">6</span><span class="stats__d">Sage, Odoo, SAP, JBS, QuickBooks et Rillet</span></dd></div>
+          <div data-reveal><dt>Logiciel à changer</dt><dd><span class="stats__n">0</span><span class="stats__d">Owl prépare en amont et exporte vers votre outil actuel</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
     <!-- 2. THE PROBLEM -->
     <section class="section problem" aria-labelledby="problem-title">
       <div class="wrap">
         <div class="section__head" data-reveal>
-          <h2 id="problem-title">Le temps part dans la préparation.</h2>
+          <h2 id="problem-title">Le temps part dans la préparation</h2>
           <p class="lede">
             Avant d’arriver dans le logiciel comptable, chaque pièce passe par les mêmes étapes, à la main.
             Sur des centaines de documents par mois, c’est ce travail répétitif qui pèse.
@@ -271,7 +281,7 @@
     <section class="section how" aria-labelledby="how-title">
       <div class="wrap">
         <div class="section__head" data-reveal>
-          <h2 id="how-title">Quatre étapes, du document à l’écriture.</h2>
+          <h2 id="how-title">Quatre étapes, du document à l’écriture</h2>
           <p class="lede">Owl n’analyse jamais une facture isolément&nbsp;: il part du contexte de votre entreprise.</p>
         </div>
         <ol class="steps4">
@@ -291,7 +301,7 @@
     <section class="section pillars-sec" aria-labelledby="pillars-title">
       <div class="wrap">
         <div class="section__head" data-reveal>
-          <h2 id="pillars-title">Deux moteurs, un même contexte.</h2>
+          <h2 id="pillars-title">Deux moteurs, un même contexte</h2>
           <p class="lede">L’activité de votre entreprise, son statut fiscal et vos règles fournisseurs guident à la fois votre comptabilité et votre préparation fiscale.</p>
         </div>
         <div class="pillars">
@@ -327,7 +337,7 @@
     <section class="section diff" aria-labelledby="diff-title">
       <div class="wrap">
         <div class="section__head" data-reveal>
-          <h2 id="diff-title">Owl ne se contente pas de lire vos factures.</h2>
+          <h2 id="diff-title">Owl ne se contente pas de lire vos factures</h2>
           <p class="lede">Il utilise le contexte de votre entreprise pour préparer leur traitement comptable et fiscal.</p>
         </div>
         <div class="readvs" data-reveal>
@@ -350,7 +360,7 @@
     <section class="section choose" aria-labelledby="choose-title">
       <div class="wrap">
         <div class="section__head" data-reveal>
-          <h2 id="choose-title">Pensé pour deux métiers.</h2>
+          <h2 id="choose-title">Pensé pour deux métiers</h2>
           <p class="lede">
             Que vous teniez la comptabilité de votre entreprise ou celle de nombreux clients,
             Owl prépare les écritures dans votre contexte, sans changer de logiciel.
@@ -408,7 +418,7 @@
     <section class="section faq" id="faq" aria-labelledby="faq-title">
       <div class="wrap faq__grid">
         <div class="faq__head" data-reveal>
-          <h2 id="faq-title">Questions fréquentes.</h2>
+          <h2 id="faq-title">Questions fréquentes</h2>
         </div>
         <div class="faq__list" data-reveal>
           <details open>
@@ -446,7 +456,7 @@
     <section class="cta-band" aria-labelledby="cta-title">
       <div class="wrap cta-band__inner" data-reveal>
         <div>
-          <h2 id="cta-title">Voyez Owl sur des documents qui ressemblent aux vôtres.</h2>
+          <h2 id="cta-title">Voyez Owl sur des documents qui ressemblent aux vôtres</h2>
           <p>Nous commençons par un échange sur vos pièces, vos volumes et votre logiciel.</p>
         </div>
         <div class="cta-band__actions">
@@ -497,6 +507,7 @@
             <li><a href="/demo#demande">Nous contacter</a></li>
             <li><a href="mailto:contact@thinkactionn.com">contact@thinkactionn.com</a></li>
             <li><a href="tel:+212644412524">+212 6 44 41 25 24</a></li>
+            <li><a href="https://www.linkedin.com/company/146743879/" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </nav>
         <nav class="footer__col" aria-label="Légal">
