@@ -1128,3 +1128,7 @@ a[href^="mailto:"], a[href^="tel:"] { white-space: nowrap; overflow-wrap: normal
 /* the app stays still for visitors who reduce motion */
 @media (prefers-reduced-motion: reduce) { .hero--split .window { transform: none !important; } }
 
+
+/* ---------- Home hero: audience line ---------- */
+.hero__for { margin-top: 20px; color: var(--mist); font-size: 1rem; }
+.hero--split .hero__lede { margin-top: 20px; }
