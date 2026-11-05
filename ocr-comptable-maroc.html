@@ -156,7 +156,7 @@
     /* header */
     .top { position: sticky; top: 0; z-index: 5; background: rgba(0,0,0,.9); color: var(--paper); border-bottom: 1px solid rgba(255,255,255,.08); }
     .top__in { display: flex; align-items: center; gap: 24px; min-height: 64px; flex-wrap: wrap; }
-    .brand { display: inline-flex; align-items: center; gap: 10px; font: 700 .9375rem var(--font-ui); letter-spacing: -0.035em; text-decoration: none; margin-right: auto; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font: 600 .9375rem var(--font-ui); letter-spacing: .02em; text-decoration: none; margin-right: auto; }
     .brand svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2.4; }
     .top nav ul { display: flex; flex-wrap: wrap; gap: 6px 22px; }
     .top nav a { color: var(--mist); text-decoration: none; font-size: .9375rem; }
@@ -237,6 +237,10 @@
     footer ul { display: flex; flex-wrap: wrap; gap: 8px 20px; }
     footer a { color: var(--mist); text-decoration: none; }
     footer a:hover { color: var(--paper); }
+    footer .social { gap: 8px; }
+    .social a { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; }
+    .social a:hover { background: #1a1a1a; }
+    .social svg { width: 20px; height: 20px; fill: currentColor; }
     a[href^="mailto:"], a[href^="tel:"] { white-space: nowrap; }
 
     @media (max-width: 900px) {
@@ -252,7 +256,7 @@
   <!-- ============ STEP 2 · SEMANTIC ARCHITECTURE ============ -->
   <header class="top" data-entity="Think Actionn">
     <div class="wrap top__in">
-      <a class="brand" href="/" aria-label="Think Actionn, accueil"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.6"/></svg>THINK ACTIONN</a>
+      <a class="brand brand--live" href="/" aria-label="Think Actionn, accueil"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.6"/></svg>THINK ACTIONN</a>
       <nav aria-label="Navigation principale">
         <ul>
           <li><a href="/features">Fonctionnalités</a></li>
@@ -544,9 +548,11 @@
           <li><a href="/confidentialite">Confidentialité</a></li>
           <li><a href="mailto:contact@thinkactionn.com">contact@thinkactionn.com</a></li>
           <li><a href="tel:+212644412524">+212 6 44 41 25 24</a></li>
-          <li><a href="https://www.linkedin.com/company/146743879/" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </nav>
+      <ul class="social" aria-label="Réseaux sociaux">
+        <li><a href="https://www.linkedin.com/company/think-actionn/" target="_blank" rel="noopener" aria-label="Think Actionn sur LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></li>
+      </ul>
     </div>
   </footer>
 </body>

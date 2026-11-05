@@ -23,7 +23,7 @@
   <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__owlReady)document.documentElement.classList.remove('js')},4000)</script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
-    {"@type":"Organization","@id":"https://www.thinkactionn.com/#organization","name":"Think Actionn","url":"https://www.thinkactionn.com/","logo":"https://www.thinkactionn.com/assets/logo.svg","email":"contact@thinkactionn.com","telephone":"+212644412524","sameAs":["https://www.linkedin.com/company/146743879/"],"areaServed":{"@type":"Country","name":"Maroc"},"brand":{"@id":"https://www.thinkactionn.com/#owl"}},
+    {"@type":"Organization","@id":"https://www.thinkactionn.com/#organization","name":"Think Actionn","url":"https://www.thinkactionn.com/","logo":"https://www.thinkactionn.com/assets/logo.svg","email":"contact@thinkactionn.com","telephone":"+212644412524","sameAs":["https://www.linkedin.com/company/think-actionn/"],"areaServed":{"@type":"Country","name":"Maroc"},"brand":{"@id":"https://www.thinkactionn.com/#owl"}},
     {"@type":"SoftwareApplication","@id":"https://www.thinkactionn.com/#owl","name":"Owl","alternateName":"Owl par Think Actionn","url":"https://www.thinkactionn.com/","applicationCategory":"BusinessApplication","inLanguage":"fr","countriesSupported":"MA","creator":{"@id":"https://www.thinkactionn.com/#organization"},"description":"Owl travaille comme un comptable senior : il part du contexte de chaque entreprise marocaine pour préparer sa comptabilité et sa déclaration de TVA. Automatisation de la pré-comptabilité, préparation comptable et fiscale complète conforme au CGNC (PCGM), au CGI et à la loi de finances, préparation des déclarations DGI (relevé des déductions EDI), export vers Sage.","slogan":"Le comptable senior de chaque entreprise marocaine."},
     {"@type":"FAQPage","@id":"https://www.thinkactionn.com/#faq","mainEntity":[{"@type":"Question","name":"Qu’est-ce qu’Owl par Think Actionn ?","acceptedAnswer":{"@type":"Answer","text":"Owl travaille comme un comptable senior. Avant de traiter la moindre facture, il comprend votre entreprise : son activité, son régime fiscal, ses fournisseurs. Il prépare ensuite votre comptabilité et votre déclaration de TVA, que vous contrôlez avant export."}},{"@type":"Question","name":"Pourquoi Owl commence-t-il par le contexte de l’entreprise ?","acceptedAnswer":{"@type":"Answer","text":"Parce que chaque entreprise est différente. La même facture ne se comptabilise pas de la même façon selon l’activité, le droit à déduction de TVA ou le prorata, et selon que le fournisseur est soumis à la retenue à la source. Owl tient compte de ce contexte pour chaque pièce, comme le ferait un comptable qui connaît le dossier."}},{"@type":"Question","name":"Qu’est-ce qui distingue Owl d’un outil qui lit les factures ?","acceptedAnswer":{"@type":"Answer","text":"Un outil de lecture recopie ce qui est écrit : fournisseur, date, montants. Owl raisonne sur la pièce : quel compte, quelle TVA récupérable, quel compte tiers, quelle retenue, quel journal. Il ne livre pas des champs, il livre un traitement comptable et fiscal."}},{"@type":"Question","name":"Comment Owl prépare-t-il ma comptabilité ?","acceptedAnswer":{"@type":"Answer","text":"Vous importez vos factures, en PDF ou en photos. Owl prépare des écritures complètes et équilibrées selon le Plan Comptable Général Marocain, dans le bon journal : achats, ventes, banque, caisse ou opérations diverses. Pour les achats, la même facture donne une écriture différente selon votre activité, votre régime fiscal et les règles de TVA et de RAS du fournisseur. Les factures en devises sont repérées sans aucun réglage et converties en dirhams au cours officiel de Bank Al-Maghrib à la date de la facture."}},{"@type":"Question","name":"Comment Owl prépare-t-il ma déclaration de TVA ?","acceptedAnswer":{"@type":"Answer","text":"À partir de vos factures et du contexte de l’entreprise, Owl prépare le tableau de déduction, le tableau RAS, le tableau d’encaissement et le relevé des déductions au format EDI de la DGI. Il applique le prorata de TVA, vérifie l’ICE et l’IF des fournisseurs et contrôle le plafond des paiements en espèces."}},{"@type":"Question","name":"Qui garde la décision finale ?","acceptedAnswer":{"@type":"Answer","text":"Vous. Owl prépare le travail d’un comptable senior, vous le relisez, le corrigez si besoin et le validez. Rien n’est exporté sans votre accord."}},{"@type":"Question","name":"Dois-je changer de logiciel comptable ?","acceptedAnswer":{"@type":"Answer","text":"Non. Owl prépare le travail en amont, puis exporte vos écritures vers le logiciel que vous utilisez déjà : Sage, Odoo, SAP, JBS, QuickBooks ou Rillet."}}]}
   ]}
@@ -39,7 +39,7 @@
 
   <header class="nav" id="top">
     <div class="wrap nav__inner">
-      <a class="brand" href="/" aria-label="Think Actionn, accueil">
+      <a class="brand brand--live" href="/" aria-label="Think Actionn, accueil">
         <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.6"/></svg>
         <span class="brand__name">THINK ACTIONN</span>
       </a>
@@ -58,8 +58,9 @@
   <main id="main">
 
     <!-- 1. WHAT IS OWL -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap hero__top">
+    <section class="hero hero--split" aria-labelledby="hero-title">
+      <div class="wrap hero__split">
+      <div class="hero__top">
         <div class="hero__head">
           <p class="hero__product">
             <svg class="owl-logo owl-logo--live" viewBox="0 0 192 106" role="img" aria-label="OWL">
@@ -81,13 +82,13 @@
             et vos tableaux TVA. Vous contrôlez, puis vous exportez.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--light" href="/demo#demande">Demander une démonstration</a>
+            <a class="btn btn--light" href="/demo#demande">Demander une démo</a>
             <a class="btn btn--ghost-dark" href="/how-it-works">Voir comment ça fonctionne</a>
           </div>
         </div>
       </div>
 
-      <div class="wrap hero__stage" id="demo">
+      <div class="hero__stage" id="demo">
         <ol class="steps-bar" data-stepsbar aria-label="Étapes de la démonstration">
           <li><span>1</span>Paramètres fiscaux</li>
           <li><span>2</span>Comptes tiers</li>
@@ -226,6 +227,7 @@
           </div>
         </div>
       </div>
+      </div>
     </section>
 
     <!-- COMPATIBLE SOFTWARE -->
@@ -245,10 +247,10 @@
       <div class="wrap">
         <h2 id="stats-title" class="stats__title">Owl en chiffres</h2>
         <dl class="stats__grid">
+          <div data-reveal><dt>Pour préparer un mois</dt><dd><span class="stats__n">5<small>min</small></span><span class="stats__d">Les pièces du mois importées en une fois, écritures et tableaux TVA prêts à contrôler</span></dd></div>
+          <div data-reveal><dt>Pour préparer un trimestre</dt><dd><span class="stats__n">5<small>min</small></span><span class="stats__d">La même rapidité pour une déclaration trimestrielle</span></dd></div>
           <div data-reveal><dt>Journaux préparés</dt><dd><span class="stats__n">5</span><span class="stats__d">Achats, ventes, banque, caisse et opérations diverses</span></dd></div>
           <div data-reveal><dt>États TVA préparés</dt><dd><span class="stats__n">4</span><span class="stats__d">Tableau de déduction, tableau RAS, tableau d’encaissement et relevé EDI pour SIMPL-TVA</span></dd></div>
-          <div data-reveal><dt>Logiciels d’export</dt><dd><span class="stats__n">6</span><span class="stats__d">Sage, Odoo, SAP, JBS, QuickBooks et Rillet</span></dd></div>
-          <div data-reveal><dt>Logiciel à changer</dt><dd><span class="stats__n">0</span><span class="stats__d">Owl prépare en amont et exporte vers votre outil actuel</span></dd></div>
         </dl>
       </div>
     </section>
@@ -495,19 +497,12 @@
             <li><a href="/companies">Entreprises</a></li>
           </ul>
         </nav>
-        <div class="footer__col">
-          <p class="footer__h">Ressources</p>
-          <ul>
-            <li><span class="footer__soon">Guides et articles, bientôt</span></li>
-          </ul>
-        </div>
         <nav class="footer__col footer__col--contact" aria-label="Think Actionn">
           <p class="footer__h">Think Actionn</p>
           <ul>
             <li><a href="/demo#demande">Nous contacter</a></li>
             <li><a href="mailto:contact@thinkactionn.com">contact@thinkactionn.com</a></li>
             <li><a href="tel:+212644412524">+212 6 44 41 25 24</a></li>
-            <li><a href="https://www.linkedin.com/company/146743879/" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </nav>
         <nav class="footer__col" aria-label="Légal">
@@ -518,7 +513,12 @@
           </ul>
         </nav>
       </div>
-      <p class="footer__copy">© <span data-year>2026</span> Think Actionn</p>
+      <div class="footer__bottom">
+        <p class="footer__copy">© <span data-year>2026</span> Think Actionn</p>
+        <ul class="social" aria-label="Réseaux sociaux">
+          <li><a href="https://www.linkedin.com/company/think-actionn/" target="_blank" rel="noopener" aria-label="Think Actionn sur LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 
