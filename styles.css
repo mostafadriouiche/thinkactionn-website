@@ -745,12 +745,22 @@ section[id], #demo { scroll-margin-top: 84px; }
 .softwares { border-bottom: 1px solid var(--line); padding: 36px 0; }
 .softwares__inner { display: block; }
 .softwares__title { color: var(--stone); font-size: .9375rem; line-height: 1.4; }
-.marquee { display: block; }
-.marquee__track { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 48px; }
+.marquee {
+  display: flex; overflow: hidden; user-select: none;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+          mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+.marquee__track { display: flex; flex: none; align-items: center; gap: 64px; padding-right: 64px; animation: marquee 30s linear infinite; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
 .marquee__track li { white-space: nowrap; font-size: clamp(1.25rem, 2vw, 1.625rem); font-weight: 500; letter-spacing: -0.02em; color: #8a8a85; transition: color .15s var(--ease); }
 .marquee__track li:hover { color: var(--ink); }
-.marquee__track li.marquee__more { font-weight: 400; }
-@media (max-width: 760px) { .marquee__track { justify-content: flex-start; gap: 12px 32px; } }
+@keyframes marquee { to { transform: translateX(-100%); } }
+@media (max-width: 760px) { .marquee__track { gap: 40px; padding-right: 40px; animation-duration: 22s; } }
+@media (prefers-reduced-motion: reduce) {
+  .marquee { -webkit-mask-image: none; mask-image: none; }
+  .marquee__track { flex-wrap: wrap; row-gap: 12px; animation: none; }
+  .marquee__track[aria-hidden="true"] { display: none; }
+}
 @media (max-width: 760px) { .softwares__inner { grid-template-columns: minmax(0, 1fr); } .softwares__title br { display: none; } }
 .journals__intro { margin-top: 16px; padding-bottom: 4px; color: var(--ink); font-weight: 500; }
 
@@ -1077,20 +1087,6 @@ a[href^="mailto:"], a[href^="tel:"] { white-space: nowrap; overflow-wrap: normal
 .social svg { width: 20px; height: 20px; fill: currentColor; }
 @media (max-width: 1060px) { .footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
-/* ---------- Animated wordmark (nav) ---------- */
-.brand--live .brand__mark circle:first-child { stroke-dasharray: 61; stroke-dashoffset: 0; }
-.brand--live .brand__name { display: inline-block; }
-.js .brand--live .brand__mark circle:first-child { stroke-dashoffset: 61; animation: brand-draw .9s var(--ease) .1s forwards; }
-.js .brand--live .brand__name { clip-path: inset(0 100% 0 0); transform: translateX(-6px); animation: brand-reveal .7s var(--ease) .55s forwards; }
-@keyframes brand-draw { to { stroke-dashoffset: 0; } }
-@keyframes brand-reveal { to { clip-path: inset(0 0 0 0); transform: none; } }
-.brand--live:hover .brand__mark circle:first-child { animation: brand-redraw .8s var(--ease); }
-@keyframes brand-redraw { from { stroke-dashoffset: 61; } to { stroke-dashoffset: 0; } }
-@media (prefers-reduced-motion: reduce) {
-  .js .brand--live .brand__mark circle:first-child, .js .brand--live .brand__name { animation: none; stroke-dashoffset: 0; clip-path: none; transform: none; }
-}
-
-
 /* ---------- Home hero: text left, the whole live app right ---------- */
 @media (min-width: 1100px) {
   .hero--split { padding: clamp(40px, 5vw, 72px) 0 clamp(56px, 6vw, 88px); }
@@ -1129,25 +1125,6 @@ a[href^="mailto:"], a[href^="tel:"] { white-space: nowrap; overflow-wrap: normal
   .stats__list dt { align-self: start; }
 }
 
-/* ---------- Nav logo: the circle is an owl eye that looks at the pointer ---------- */
-.brand__mark .brand__pupil { fill: currentColor; stroke: none; transform: translate(var(--px, 0px), var(--py, 0px)); transition: transform .25s var(--ease); }
-.js .brand--live .brand__pupil { opacity: 0; animation: pupil-in .4s var(--ease) .9s forwards; }
-@keyframes pupil-in { from { opacity: 0; transform: scale(.2); transform-origin: 12px 12px; } to { opacity: 1; } }
-.brand--live .brand__mark circle:first-child { transform: rotate(-90deg); transform-origin: center; }
-@media (prefers-reduced-motion: reduce) {
-  .hero--split .window { transform: none !important; }
-  .js .brand--live .brand__pupil { animation: none; opacity: 1; }
-}
+/* the app stays still for visitors who reduce motion */
+@media (prefers-reduced-motion: reduce) { .hero--split .window { transform: none !important; } }
 
-/* ---------- Company name keeps moving: letters ripple, the eye blinks and looks around ---------- */
-.brand--live .brand__name .ch { display: inline-block; white-space: pre; animation: ch-wave 6s var(--ease) infinite; animation-delay: calc(1.8s + var(--i) * 45ms); }
-@keyframes ch-wave { 0%, 9%, 100% { transform: none; } 4% { transform: translateY(-3px); } }
-.brand--live .brand__mark { transform-origin: 50% 50%; animation: brand-blink 6s var(--ease) 3.2s infinite; }
-@keyframes brand-blink { 0%, 94%, 100% { transform: scaleY(1); } 96.5% { transform: scaleY(.12); } }
-.brand--live.is-idle .brand__pupil { animation: pupil-look 6s var(--ease) 1.4s infinite; }
-@keyframes pupil-look { 0%, 20%, 100% { transform: translate(0, 0); } 28%, 45% { transform: translate(-3px, 1px); } 53%, 72% { transform: translate(3px, 1px); } }
-.brand--live:hover .brand__name .ch { animation: ch-hover .5s var(--ease); animation-delay: calc(var(--i) * 30ms); }
-@keyframes ch-hover { 50% { transform: translateY(-3px); } }
-@media (prefers-reduced-motion: reduce) {
-  .brand--live .brand__name .ch, .brand--live .brand__mark, .brand--live.is-idle .brand__pupil { animation: none; }
-}
