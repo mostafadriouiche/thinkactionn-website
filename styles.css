@@ -1118,7 +1118,7 @@ a[href^="mailto:"], a[href^="tel:"] { white-space: nowrap; overflow-wrap: normal
 .stats__list { border-bottom: 1px solid var(--line-dark); }
 .stats__list > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "label fig" "desc fig"; column-gap: 32px; align-items: center; padding: clamp(24px, 3vw, 36px) 0; border-top: 1px solid var(--line-dark); }
 .stats__list > div:nth-child(2) { transition-delay: .06s; } .stats__list > div:nth-child(3) { transition-delay: .12s; }
-.stats__list > div:nth-child(4) { transition-delay: .18s; } .stats__list > div:nth-child(5) { transition-delay: .24s; }
+.stats__list > div:nth-child(4) { transition-delay: .18s; } .stats__list > div:nth-child(5) { transition-delay: .24s; } .stats__list > div:nth-child(n+6) { transition-delay: .3s; }
 .stats__list dt { grid-area: label; align-self: end; font-size: 1.0625rem; font-weight: 500; }
 .stats__list dd { display: contents; }
 .stats__d { grid-area: desc; align-self: start; margin-top: 4px; color: var(--mist); font-size: .9375rem; max-width: 30em; }
