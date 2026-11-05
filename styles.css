@@ -1138,3 +1138,16 @@ a[href^="mailto:"], a[href^="tel:"] { white-space: nowrap; overflow-wrap: normal
   .hero--split .window { transform: none !important; }
   .js .brand--live .brand__pupil { animation: none; opacity: 1; }
 }
+
+/* ---------- Company name keeps moving: letters ripple, the eye blinks and looks around ---------- */
+.brand--live .brand__name .ch { display: inline-block; white-space: pre; animation: ch-wave 6s var(--ease) infinite; animation-delay: calc(1.8s + var(--i) * 45ms); }
+@keyframes ch-wave { 0%, 9%, 100% { transform: none; } 4% { transform: translateY(-3px); } }
+.brand--live .brand__mark { transform-origin: 50% 50%; animation: brand-blink 6s var(--ease) 3.2s infinite; }
+@keyframes brand-blink { 0%, 94%, 100% { transform: scaleY(1); } 96.5% { transform: scaleY(.12); } }
+.brand--live.is-idle .brand__pupil { animation: pupil-look 6s var(--ease) 1.4s infinite; }
+@keyframes pupil-look { 0%, 20%, 100% { transform: translate(0, 0); } 28%, 45% { transform: translate(-3px, 1px); } 53%, 72% { transform: translate(3px, 1px); } }
+.brand--live:hover .brand__name .ch { animation: ch-hover .5s var(--ease); animation-delay: calc(var(--i) * 30ms); }
+@keyframes ch-hover { 50% { transform: translateY(-3px); } }
+@media (prefers-reduced-motion: reduce) {
+  .brand--live .brand__name .ch, .brand--live .brand__mark, .brand--live.is-idle .brand__pupil { animation: none; }
+}

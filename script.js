@@ -530,6 +530,18 @@
   if (year) year.textContent = new Date().getFullYear();
   window.__owlReady = true;
 
+  /* ---------- Company name: one span per letter so the name can ripple ---------- */
+  var liveBrand = $('.brand--live');
+  var liveName = liveBrand && $('.brand__name', liveBrand);
+  if (liveName && !liveName.children.length) {
+    liveName.setAttribute('aria-hidden', 'true');
+    liveName.innerHTML = liveName.textContent.split('').map(function (ch, i) {
+      return '<span class="ch" style="--i:' + i + '">' + (ch === ' ' ? ' ' : ch) + '</span>';
+    }).join('');
+  }
+  // until the mouse moves (and always on touch screens) the eye looks around by itself
+  if (liveBrand) liveBrand.classList.add('is-idle');
+
   /* ---------- Pointer: the app tilts toward the mouse, the logo eye follows it ---------- */
   var finePointer = window.matchMedia && matchMedia('(pointer: fine)').matches;
   var calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -563,7 +575,7 @@
         pupil.style.setProperty('--py', (ey / d * k).toFixed(2) + 'px');
       }
     };
-    window.addEventListener('pointermove', function (e) { px = e.clientX; py = e.clientY; if (!raf) raf = requestAnimationFrame(frame); }, { passive: true });
+    window.addEventListener('pointermove', function (e) { if (liveBrand) liveBrand.classList.remove('is-idle'); px = e.clientX; py = e.clientY; if (!raf) raf = requestAnimationFrame(frame); }, { passive: true });
     document.addEventListener('pointerleave', function () {
       if (win) { win.classList.remove('is-tracking'); ['--rx', '--ry', '--tx', '--ty'].forEach(function (p) { win.style.removeProperty(p); }); }
       if (pupil) { pupil.style.removeProperty('--px'); pupil.style.removeProperty('--py'); }
