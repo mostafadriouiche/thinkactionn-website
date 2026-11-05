@@ -529,4 +529,44 @@
   var year = $('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
   window.__owlReady = true;
+
+  /* ---------- Pointer: the app tilts toward the mouse, the logo eye follows it ---------- */
+  var finePointer = window.matchMedia && matchMedia('(pointer: fine)').matches;
+  var calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (finePointer && !calm) {
+    var hero = $('.hero--split'), win = hero && $('.window', hero);
+    var pupil = $('.brand--live .brand__pupil'), mark = pupil && pupil.ownerSVGElement;
+    var raf = 0, px = 0, py = 0;
+    var frame = function () {
+      raf = 0;
+      if (win && hero) {
+        var r = hero.getBoundingClientRect();
+        if (py >= r.top && py <= r.bottom && window.innerWidth >= 1100) {
+          var w = win.getBoundingClientRect();
+          var dx = (px - (w.left + w.width / 2)) / (w.width / 2), dy = (py - (w.top + w.height / 2)) / (w.height / 2);
+          dx = Math.max(-1, Math.min(1, dx)); dy = Math.max(-1, Math.min(1, dy));
+          win.classList.add('is-tracking');
+          win.style.setProperty('--ry', (dx * 4).toFixed(2) + 'deg');
+          win.style.setProperty('--rx', (-dy * 3).toFixed(2) + 'deg');
+          win.style.setProperty('--tx', (dx * 6).toFixed(1) + 'px');
+          win.style.setProperty('--ty', (dy * 4).toFixed(1) + 'px');
+        } else {
+          win.classList.remove('is-tracking');
+          ['--rx', '--ry', '--tx', '--ty'].forEach(function (p) { win.style.removeProperty(p); });
+        }
+      }
+      if (pupil && mark) {
+        var m = mark.getBoundingClientRect();
+        var ex = px - (m.left + m.width / 2), ey = py - (m.top + m.height / 2), d = Math.sqrt(ex * ex + ey * ey) || 1;
+        var k = Math.min(1, d / 120) * 3.6;
+        pupil.style.setProperty('--px', (ex / d * k).toFixed(2) + 'px');
+        pupil.style.setProperty('--py', (ey / d * k).toFixed(2) + 'px');
+      }
+    };
+    window.addEventListener('pointermove', function (e) { px = e.clientX; py = e.clientY; if (!raf) raf = requestAnimationFrame(frame); }, { passive: true });
+    document.addEventListener('pointerleave', function () {
+      if (win) { win.classList.remove('is-tracking'); ['--rx', '--ry', '--tx', '--ty'].forEach(function (p) { win.style.removeProperty(p); }); }
+      if (pupil) { pupil.style.removeProperty('--px'); pupil.style.removeProperty('--py'); }
+    });
+  }
 })();

@@ -31,7 +31,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@500&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@500&family=Schibsted+Grotesk:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -40,7 +40,7 @@
   <header class="nav" id="top">
     <div class="wrap nav__inner">
       <a class="brand brand--live" href="/" aria-label="Think Actionn, accueil">
-        <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.6"/></svg>
+        <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.6"/><circle class="brand__pupil" cx="12" cy="12" r="3.4"/></svg>
         <span class="brand__name">THINK ACTIONN</span>
       </a>
       <nav class="nav__links" id="nav-menu" aria-label="Navigation principale">
@@ -89,12 +89,6 @@
       </div>
 
       <div class="hero__stage" id="demo">
-        <ol class="steps-bar" data-stepsbar aria-label="Étapes de la démonstration">
-          <li><span>1</span>Paramètres fiscaux</li>
-          <li><span>2</span>Comptes tiers</li>
-          <li><span>3</span>Doc / Photo</li>
-          <li><span>4</span>Analyse et journal</li>
-        </ol>
 
         <div class="window" role="img" aria-label="Démonstration du tableau de bord OWL : le secteur Services et l’option avec droit à déduction sont choisis, les comptes tiers fournisseurs sont vérifiés, un PDF de dix pages est chargé puis analysé. Le journal des achats se remplit avec quarante lignes équilibrées.">
           <div class="window__bar">
@@ -245,12 +239,13 @@
     <!-- OWL IN FIGURES (facts stated elsewhere on the site; add usage figures once measured) -->
     <section class="stats" aria-labelledby="stats-title">
       <div class="wrap">
-        <h2 id="stats-title" class="stats__title">Owl en chiffres</h2>
-        <dl class="stats__grid">
-          <div data-reveal><dt>Pour préparer un mois</dt><dd><span class="stats__n">5<small>min</small></span><span class="stats__d">Les pièces du mois importées en une fois, écritures et tableaux TVA prêts à contrôler</span></dd></div>
-          <div data-reveal><dt>Pour préparer un trimestre</dt><dd><span class="stats__n">5<small>min</small></span><span class="stats__d">La même rapidité pour une déclaration trimestrielle</span></dd></div>
-          <div data-reveal><dt>Journaux préparés</dt><dd><span class="stats__n">5</span><span class="stats__d">Achats, ventes, banque, caisse et opérations diverses</span></dd></div>
-          <div data-reveal><dt>États TVA préparés</dt><dd><span class="stats__n">4</span><span class="stats__d">Tableau de déduction, tableau RAS, tableau d’encaissement et relevé EDI pour SIMPL-TVA</span></dd></div>
+        <h2 id="stats-title" class="stats__title">Moins de saisie,<br>des résultats mesurables</h2>
+        <dl class="stats__list">
+          <div data-reveal><dt>Pour préparer un mois de pièces</dt><dd><span class="stats__d">Écritures et tableaux TVA prêts à contrôler</span><span class="stats__n">5<small>&nbsp;min</small></span></dd></div>
+          <div data-reveal><dt>Pour préparer un trimestre</dt><dd><span class="stats__d">Toute la période importée en une fois</span><span class="stats__n">5<small>&nbsp;min</small></span></dd></div>
+          <div data-reveal><dt>Journaux préparés</dt><dd><span class="stats__d">Achats, ventes, banque, caisse et opérations diverses</span><span class="stats__n">5</span></dd></div>
+          <div data-reveal><dt>États TVA préparés</dt><dd><span class="stats__d">Tableau de déduction, tableau RAS, tableau d’encaissement, relevé EDI</span><span class="stats__n">4</span></dd></div>
+          <div data-reveal><dt>Logiciels comptables pris en charge à l’export</dt><dd><span class="stats__d">Sage, Odoo, SAP, JBS, QuickBooks et Rillet</span><span class="stats__n">6</span></dd></div>
         </dl>
       </div>
     </section>
